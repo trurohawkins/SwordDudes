@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1318940380712018}
+  m_IsPrefabParent: 1
+--- !u!1 &1318940380712018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4762655034154638}
+  - component: {fileID: 114826263384625194}
+  - component: {fileID: 114489528525841770}
+  - component: {fileID: 114920458022350348}
+  m_Layer: 0
+  m_Name: DoneFloor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4762655034154638
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318940380712018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 134, y: 87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114489528525841770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318940380712018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6518241159ffb54e87fbf7f07acd69c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 0}
+  range: 0
+  speedCounter: 0
+  speed: 0
+  active: 1
+  health: 0
+  maxHealth: 0
+  constitution: 1
+  conHits: 5
+  staggerThreshold: -1
+  recoverySpeed: 0
+  weight: -1
+  backStabDefense: 0
+  dodging: 0
+  poises: []
+  def: 1
+  kDef: 1
+  sDef: 1
+  dead: 0
+  hBar: {fileID: 0}
+  invulnerable: 0
+  damageText: {fileID: 0}
+  resumeAction: []
+  blood: {fileID: 0}
+  bloodMass: {fileID: 0}
+  corpse: {fileID: 0}
+  corpseHeight: 0
+  swordStuck: 0
+  staggerVul: 1
+  invulTime: 41
+  curCorpse: {fileID: 0}
+  power: 0
+  healthIcon: {fileID: 0}
+  isTarget: 0
+  removeOnMet: 1
+  master: {fileID: 0}
+  pos: {x: 0, y: 0}
+  turnOff: []
+  clearSpace: 0
+  killTarget: 0
+  spawned: 0
+  spreadChance: 0
+  body: []
+--- !u!114 &114826263384625194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318940380712018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5469bba5caa8245815faffd3fb8f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 37
+  color: {r: 0.17650843, g: 0.4716981, b: 0.12237452, a: 1}
+  spawned: 0
+  parent: {fileID: 0}
+  impenetratable: 0
+  unmovable: 0
+  dontLookAtMe: 0
+  unImportant: 0
+  active: 0
+  alive: 0
+  etheral: 0
+  hidden: 0
+  removeOnCol: 0
+  manyBodied: 0
+  invisible: 0
+  catchAll: 0
+  originPoint: {x: 0, y: 0}
+  centerPoint: {x: 0, y: 0}
+  body: []
+  direction: 0
+  height: 5
+  width: 1
+  length: 1
+  sprites: []
+  speed: 0
+  hyperSpeed: 4
+  speedCounter: 0
+  activeAction: []
+  effects: []
+  skin: {fileID: 0}
+  colActions: []
+  entActions:
+  - {fileID: 114489528525841770}
+  exiActions: []
+  dead: 0
+  xEdge: 0
+  yEdge: 0
+  curCollided: []
+  curEntered: []
+  floatStep: 1
+--- !u!114 &114920458022350348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318940380712018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ee26740e345a7439617dcba53574ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+  tiles:
+  - {fileID: 1534780991893884, guid: 2182a1c16658f4b4391119d6c187445f, type: 2}
+  - {fileID: 1992213701697392, guid: 7f51726c8cb531845ae564e619c511cd, type: 2}
+  - {fileID: 1063701366353304, guid: eb080378c5d74554cb7c02d8b9016957, type: 2}
+  - {fileID: 1905344777710682, guid: f81df1b7b85090a4582fde0c3057fe84, type: 2}
+  - {fileID: 1101275354943256, guid: 866d5bb2e59aa1246a9026df3f1429cf, type: 2}
+  - {fileID: 1242735934377196, guid: 799e03a947187bd4a9ce53d4d4616180, type: 2}
+  - {fileID: 1074206230105168, guid: 77cecac863543f8438aeaab0a40bf7bf, type: 2}
+  - {fileID: 1469807429294856, guid: 24803ac530d6e344a98da32a6ce40177, type: 2}
+  - {fileID: 1417223196895218, guid: 1fa2520681021f94a988cf4e6f46cb36, type: 2}
+  - {fileID: 1770701993374870, guid: e221f774ff1dd6c42a527b0ba114f5fe, type: 2}
+  - {fileID: 1548153876560062, guid: 8c51799ec1e74ae40a288ae00984ad22, type: 2}
+  - {fileID: 1341581919305648, guid: 8aa9a71cd4c546a4facde1fdd5b72457, type: 2}
+  - {fileID: 1238579997684976, guid: afd2312eed049b14d91b46aa13f7a0ac, type: 2}
+  - {fileID: 1594602574998562, guid: 9f08e9e946338bd4fbcae6950dbc6160, type: 2}
+  - {fileID: 1805414487844530, guid: 22f6b31504b2d2b47a11023a4a70e34c, type: 2}
+  set: []
+  cornerPriority: 0
+  size: {x: 7.692307, y: 7.692307}
+  color: {r: 0.34295106, g: 0.6226415, b: 0.20852618, a: 1}
+  sorting: -5

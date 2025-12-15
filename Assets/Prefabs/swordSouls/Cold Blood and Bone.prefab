@@ -1,0 +1,280 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1752815216565400}
+  m_IsPrefabParent: 1
+--- !u!1 &1752815216565400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4105821135414882}
+  - component: {fileID: 114298682536200360}
+  - component: {fileID: 114896597557864932}
+  - component: {fileID: 114435723425328572}
+  m_Layer: 0
+  m_Name: Cold Blood and Bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4105821135414882
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1752815216565400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.20227, y: 30.728357, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114298682536200360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1752815216565400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002caa5b36192f14785d6d1b40173abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 0}
+  range: 0
+  speedCounter: 0
+  speed: 0
+  active: 1
+  chunk: {fileID: 1323797418252248, guid: 078af41bed0ae0247995d1dc5e4282c2, type: 2}
+  curPos: 0
+  oldPos: 0
+  curDir: 0
+  intervals: []
+  anglePath: 
+  lifeSpacer: 0
+  swinging: 0
+  swordDist: 0
+  attackRange: {x: 0, y: 0}
+  bladeMulti: 3
+  maxSpeed: 25
+  minSpeed: 2
+  brace: 1
+  windingDown: 0
+  singleStrike: 0
+  readyToSwing: 1
+  beingKnocked: 0
+  startPos: 0
+  checkPoses: []
+  checkCenter: {x: 0, y: 0}
+  checkAngle: 0
+  bladeSpacing: 0
+  multiAngleSpacing: 20
+  taperMulti: 3
+  frictionValue: 0.1
+  swingPower: 0
+  powInc: 0.05
+  oldSwing: 0
+  maxMuseSpeed: 1
+  minMuseSpeed: 0
+  museSpeed: 0
+  mobileCenter: {x: -2, y: -2}
+  curGoal: 0
+  droopFail: 20
+  sheathed: 0
+  inside: 0
+  team: -1
+--- !u!114 &114435723425328572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1752815216565400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc20fb82c48d0d1458c6cfb5094cdaeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 0}
+  range: 4
+  speedCounter: 0
+  speed: 6
+  active: 1
+  soulName: Thirst
+  lerpSwordColor: 1
+  soulColorA: {r: 0, g: 0, b: 0, a: 0}
+  heatColorA: {r: 0, g: 0, b: 0, a: 0}
+  soulColorB: {r: 0, g: 0, b: 0, a: 0}
+  heatColorB: {r: 0, g: 0, b: 0, a: 0}
+  mainColor:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.51139194, g: 0.6415094, b: 0.6415094, a: 1}
+  - {r: 0.23472849, g: 0.23584908, b: 0.21471167, a: 1}
+  - {r: 0.21215078, g: 0.024296913, b: 0.3962264, a: 1}
+  subColor:
+  - {r: 0.3490566, g: 0.31118727, b: 0.31118727, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9622642, g: 0.29264456, b: 0.15886435, a: 1}
+  - {r: 0.91372555, g: 0.909804, b: 0.7372549, a: 1}
+  detColor:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.4528302, g: 0.1756597, b: 0.07048772, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.3019608, g: 0.2509804, b: 0.2509804, a: 1}
+  powerColor:
+  - {r: 0.4431373, g: 0.03137255, b: 0.03529412, a: 1}
+  - {r: 0.745283, g: 0.1753344, b: 0.059763268, a: 1}
+  - {r: 0.73927975, g: 0, b: 1, a: 1}
+  - {r: 0.8000001, g: 0.1254902, b: 0.14509805, a: 1}
+  stagUIColor: []
+  symbol: {fileID: 21300000, guid: ab224b6f13b285a4ca9265f915f332ad, type: 3}
+  will: {fileID: 0}
+  body: {fileID: 0}
+  wielder: {fileID: 0}
+  life: {fileID: 0}
+  pNum: 0
+  fade: 0
+  myPlayer: {fileID: 0}
+  pAnim: {fileID: 0}
+  myCPU: {fileID: 0}
+  ic: {fileID: 0}
+  swordSprite: {fileID: 1099151636803524, guid: d78e06912469cfb459266ca3d7a41325,
+    type: 2}
+  soulStats: {fileID: 1906854419362164, guid: 7cb62f142001f104f8905cb316cacd08, type: 2}
+  fx: {fileID: 1710040081170070, guid: 405748b77f61a5d4586d60697d2b3fa3, type: 2}
+  dodgeParticle: {fileID: 0}
+  SwordAnim: {fileID: 1523643362105842, guid: 30dd37cb577dc7548a9ca5e28ef00d85, type: 2}
+  hitEffect: {fileID: 1766578580420552, guid: 4fd4e7312e8cdfe4ca1a24cf6165335e, type: 2}
+  attackWidth: 1
+  attackLength: 1
+  attackSpacing: -1
+  attackMulti: 2
+  attackMultiSpacing: 7
+  attackTaper: -0.6
+  attackDist: -1
+  maxStrikes: 600
+  damage: {x: 3, y: 10}
+  staggerDamage: {x: 5, y: 10}
+  staggerTime: 90
+  knockBackDamage: {x: 1, y: 10}
+  mass: {x: 0, y: 65}
+  swordWeight: 0
+  swordAccel: 0.009
+  speedBoost: 0
+  slowDown: 0
+  dodgeSpeed: 5
+  dodgeLength: 20
+  dodgeRecover: 3
+  dodgeStart: 12
+  dodgeWindow: 0.6
+  attackSpeed: {x: 2, y: 18}
+  chargedSpeed: {x: 0, y: 0}
+  slowSpeeds: {x: 0, y: 0}
+  fastSpeeds: {x: 1.5, y: 1.5}
+  bracePower: 2
+  swingAmount: 35
+  receiveHeat: 1
+  burnExemptParticles: 1
+  burningPoint: 80
+  freezingPoint: 0
+  climate: 50
+  energy: 0
+  baseEnergy: 50
+  burst: 0
+  bursting: 0
+  maxHeat: 85
+  burning: 0
+  heatSpeed: 0.8
+  chargeSpeed: 0.32
+  bodyHeatMod: 1
+  swingHitHeat: 5
+  fullPower: 1
+  stats:
+  - damage
+  - stagger
+  - knockBack
+  multis:
+  - 3
+  - 5
+  - 2
+  burnDefenses: {x: 0, y: 0, z: 0}
+  description: This blade hungrily thirsts for blood, it saps you of your health.
+    But upon a successful strike it steals enemy's health and heals you.
+  swingPause: 25
+  swordAlpha: 1
+  curGear: 1
+  gearHeatMod: 2
+  gearCoolMod: 0
+  baseRange: 1
+  flareRange: 0
+  chunkAnimation: 1
+  swingDamage: 3
+  lifeHeal: 1.2
+  curDamage: 0
+  healWhither: 0.05
+  igniteDamage: 1.5
+  igniteHeal: 2
+--- !u!114 &114896597557864932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1752815216565400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5469bba5caa8245815faffd3fb8f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3
+  debugDraw: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  spawned: 0
+  parent: {fileID: 0}
+  impenetratable: 0
+  unmovable: 0
+  dontLookAtMe: 1
+  unImportant: 0
+  active: 1
+  alive: 0
+  gaseous: 0
+  etheral: 1
+  hidden: 1
+  removeOnCol: 0
+  manyBodied: 0
+  invisible: 0
+  catchAll: 0
+  originPoint: {x: 0, y: 0}
+  centerPoint: {x: 0, y: 0}
+  body: []
+  direction: 0
+  height: 10
+  width: 0
+  length: 0
+  sprites: []
+  speed: 0
+  hyperSpeed: 5
+  speedCounter: 0
+  activeAction: []
+  effects: []
+  skin: {fileID: 0}
+  colActions: []
+  entActions: []
+  exiActions: []
+  dead: 0
+  xEdge: 0
+  yEdge: 0
+  curCollided: []
+  curEntered: []
+  floatStep: 1

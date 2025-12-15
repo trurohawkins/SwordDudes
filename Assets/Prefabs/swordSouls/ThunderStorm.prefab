@@ -1,0 +1,280 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1294819394461560}
+  m_IsPrefabParent: 1
+--- !u!1 &1294819394461560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4165638539436976}
+  - component: {fileID: 114946253228077160}
+  - component: {fileID: 114435582997702624}
+  - component: {fileID: 114749332664614844}
+  m_Layer: 0
+  m_Name: ThunderStorm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4165638539436976
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294819394461560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.20227, y: 30.728357, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114435582997702624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294819394461560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5469bba5caa8245815faffd3fb8f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3
+  debugDraw: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  spawned: 0
+  parent: {fileID: 0}
+  impenetratable: 0
+  unmovable: 0
+  dontLookAtMe: 1
+  unImportant: 0
+  active: 1
+  alive: 0
+  gaseous: 0
+  etheral: 1
+  hidden: 1
+  removeOnCol: 0
+  manyBodied: 0
+  invisible: 0
+  catchAll: 0
+  originPoint: {x: 0, y: 0}
+  centerPoint: {x: 0, y: 0}
+  body: []
+  direction: 0
+  height: 10
+  width: 0
+  length: 0
+  sprites: []
+  speed: 0
+  hyperSpeed: 5
+  speedCounter: 0
+  activeAction: []
+  effects: []
+  skin: {fileID: 0}
+  colActions: []
+  entActions: []
+  exiActions: []
+  dead: 0
+  xEdge: 0
+  yEdge: 0
+  curCollided: []
+  curEntered: []
+  floatStep: 1
+--- !u!114 &114749332664614844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294819394461560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa04f3d3f073d3342856c0131c612142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 0}
+  range: 5
+  speedCounter: 0
+  speed: 6
+  active: 1
+  soulName: Rai
+  lerpSwordColor: 1
+  soulColorA: {r: 0, g: 0, b: 0, a: 0}
+  heatColorA: {r: 0, g: 0, b: 0, a: 0}
+  soulColorB: {r: 0, g: 0, b: 0, a: 0}
+  heatColorB: {r: 0, g: 0, b: 0, a: 0}
+  mainColor:
+  - {r: 0.31284645, g: 0.27714488, b: 0.33962262, a: 1}
+  - {r: 0.48320442, g: 0.39404592, b: 0.5188679, a: 1}
+  - {r: 0.8867924, g: 0.8026489, b: 0, a: 1}
+  - {r: 0.39864993, g: 0.4245283, b: 0.38247597, a: 1}
+  subColor:
+  - {r: 0.66853887, g: 0.7529412, b: 0.38039216, a: 1}
+  - {r: 0.7334735, g: 0.51023495, b: 0.9245283, a: 1}
+  - {r: 0.82990605, g: 0.51370597, b: 0.9811321, a: 1}
+  - {r: 0.9987322, g: 1, b: 0, a: 1}
+  detColor:
+  - {r: 0.101960786, g: 0.09555485, b: 0, a: 1}
+  - {r: 0.12175837, g: 0, b: 0.16037738, a: 1}
+  - {r: 0.37189132, g: 0.040939845, b: 0.3773585, a: 1}
+  - {r: 0.13092713, g: 0.0981221, b: 0.14150941, a: 1}
+  powerColor:
+  - {r: 1, g: 0.91147983, b: 0, a: 1}
+  - {r: 0.82978123, g: 0.13932894, b: 0.9528302, a: 1}
+  - {r: 1, g: 0, b: 0.89079237, a: 1}
+  - {r: 0.6735814, g: 0.15690638, b: 0.7735849, a: 1}
+  stagUIColor:
+  - {r: 0.5377358, g: 0.43736628, b: 0.10399607, a: 1}
+  - {r: 0.6775373, g: 0.1318975, b: 0.7169812, a: 1}
+  - {r: 0.57641834, g: 0.19023673, b: 0.7075472, a: 1}
+  - {r: 0.40860143, g: 0.31581524, b: 0.4433962, a: 1}
+  symbol: {fileID: 21300000, guid: c33a3f50d1ce8ac4ea848b2906421f33, type: 3}
+  will: {fileID: 0}
+  body: {fileID: 0}
+  wielder: {fileID: 0}
+  life: {fileID: 0}
+  pNum: 0
+  fade: 0
+  myPlayer: {fileID: 0}
+  pAnim: {fileID: 0}
+  myCPU: {fileID: 0}
+  ic: {fileID: 0}
+  swordSprite: {fileID: 1771263992822018, guid: 01cb5ab2630563d4ea14c07b0c5151de,
+    type: 2}
+  soulStats: {fileID: 1032043846840630, guid: 6a9f06a76c09ed6498da35ff4bb1ea3d, type: 2}
+  fx: {fileID: 1710040081170070, guid: e7b607db64344a648bdc75f59d4f21d8, type: 2}
+  dodgeParticle: {fileID: 1649030013574862, guid: 398aa62c5aa16c64f9fad299f91b8581,
+    type: 2}
+  SwordAnim: {fileID: 1095142641345018, guid: 16f1f7e255119974aba46c2fe9f262b0, type: 2}
+  hitEffect: {fileID: 1766578580420552, guid: 4fd4e7312e8cdfe4ca1a24cf6165335e, type: 2}
+  attackWidth: 1
+  attackLength: 1
+  attackSpacing: -1
+  attackMulti: 1
+  attackMultiSpacing: 0
+  attackTaper: 0
+  attackDist: -1
+  maxStrikes: 666
+  damage: {x: 2, y: 9}
+  staggerDamage: {x: 22, y: 40}
+  staggerTime: 100
+  knockBackDamage: {x: 12, y: 47}
+  mass: {x: 0, y: 35}
+  swordWeight: 15
+  swordAccel: 0.005
+  speedBoost: 2
+  slowDown: 0
+  dodgeSpeed: 3
+  dodgeLength: 20
+  dodgeRecover: 18
+  dodgeStart: 8
+  dodgeWindow: 0.35
+  attackSpeed: {x: 5, y: 8}
+  chargedSpeed: {x: 12, y: 35}
+  slowSpeeds: {x: 0.1, y: 0.35}
+  fastSpeeds: {x: 1.2, y: 1.5}
+  bracePower: 2
+  swingAmount: 25
+  receiveHeat: 1
+  burnExemptParticles: 0
+  burningPoint: 100
+  freezingPoint: 0
+  climate: 50
+  energy: 0
+  baseEnergy: 50
+  burst: 5
+  bursting: 0
+  maxHeat: 130
+  burning: 0
+  heatSpeed: 0.7
+  chargeSpeed: 0.02
+  bodyHeatMod: 1
+  swingHitHeat: 5
+  fullPower: 1
+  stats:
+  - damage
+  - knockBack
+  multis:
+  - 2
+  - 2
+  burnDefenses: {x: 1.2, y: 1, z: 1.5}
+  description: upon heating up this catches an electrical spark that hurts user and
+    speeds up the blade. When blade is hit  that spark is released and the user is
+    hurt.
+  swingPause: 0
+  swordAlpha: 1
+  curGear: 1
+  gearHeatMod: 2
+  gearCoolMod: 1
+  baseRange: 2
+  flareRange: 4
+  burnDamage: 0.2
+  zapDamage: 7
+  zapDeathTime: 3
+--- !u!114 &114946253228077160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294819394461560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002caa5b36192f14785d6d1b40173abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 0}
+  range: 0
+  speedCounter: 0
+  speed: 0
+  active: 1
+  chunk: {fileID: 1323797418252248, guid: 078af41bed0ae0247995d1dc5e4282c2, type: 2}
+  curPos: 0
+  oldPos: 0
+  curDir: 0
+  intervals: []
+  anglePath: 
+  lifeSpacer: 0
+  swinging: 0
+  swordDist: 0
+  attackRange: {x: 0, y: 0}
+  bladeMulti: 3
+  maxSpeed: 25
+  minSpeed: 2
+  brace: 1
+  windingDown: 0
+  singleStrike: 0
+  readyToSwing: 1
+  beingKnocked: 0
+  startPos: 0
+  checkPoses: []
+  checkCenter: {x: 0, y: 0}
+  checkAngle: 0
+  bladeSpacing: 0
+  multiAngleSpacing: 20
+  taperMulti: 3
+  frictionValue: 0.1
+  swingPower: 0
+  powInc: 0.05
+  oldSwing: 0
+  maxMuseSpeed: 1
+  minMuseSpeed: 0
+  museSpeed: 0
+  mobileCenter: {x: -2, y: -2}
+  curGoal: 0
+  droopFail: 20
+  sheathed: 0
+  inside: 0
+  team: -1

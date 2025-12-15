@@ -1,0 +1,277 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1643643185422324}
+  m_IsPrefabParent: 1
+--- !u!1 &1643643185422324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4942117823261870}
+  - component: {fileID: 114490461940674328}
+  - component: {fileID: 114433525007222854}
+  - component: {fileID: 114801333274084586}
+  m_Layer: 0
+  m_Name: Tiny
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4942117823261870
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643643185422324}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.20227, y: 30.728357, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114433525007222854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643643185422324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5469bba5caa8245815faffd3fb8f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3
+  debugDraw: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  spawned: 0
+  parent: {fileID: 0}
+  impenetratable: 0
+  unmovable: 0
+  dontLookAtMe: 1
+  unImportant: 0
+  active: 1
+  alive: 0
+  gaseous: 0
+  etheral: 1
+  hidden: 1
+  removeOnCol: 0
+  manyBodied: 0
+  invisible: 0
+  catchAll: 0
+  originPoint: {x: 0, y: 0}
+  centerPoint: {x: 0, y: 0}
+  body: []
+  direction: 0
+  height: 10
+  width: 0
+  length: 0
+  sprites: []
+  speed: 0
+  hyperSpeed: 5
+  speedCounter: 0
+  activeAction: []
+  effects: []
+  skin: {fileID: 0}
+  colActions: []
+  entActions: []
+  exiActions: []
+  dead: 0
+  xEdge: 0
+  yEdge: 0
+  curCollided: []
+  curEntered: []
+  floatStep: 1
+--- !u!114 &114490461940674328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643643185422324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002caa5b36192f14785d6d1b40173abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 0}
+  range: 0
+  speedCounter: 0
+  speed: 0
+  active: 1
+  chunk: {fileID: 1323797418252248, guid: 078af41bed0ae0247995d1dc5e4282c2, type: 2}
+  curPos: 0
+  oldPos: 0
+  curDir: 0
+  intervals: []
+  anglePath: 
+  lifeSpacer: 0
+  swinging: 0
+  swordDist: 0
+  attackRange: {x: 0, y: 0}
+  bladeMulti: 3
+  maxSpeed: 25
+  minSpeed: 2
+  brace: 1
+  windingDown: 0
+  singleStrike: 0
+  readyToSwing: 1
+  beingKnocked: 0
+  startPos: 0
+  checkPoses: []
+  checkCenter: {x: 0, y: 0}
+  checkAngle: 0
+  bladeSpacing: 0
+  multiAngleSpacing: 20
+  taperMulti: 3
+  frictionValue: 0.1
+  swingPower: 0
+  powInc: 0.05
+  oldSwing: 0
+  maxMuseSpeed: 1
+  minMuseSpeed: 0
+  museSpeed: 0
+  mobileCenter: {x: -2, y: -2}
+  curGoal: 0
+  droopFail: 20
+  sheathed: 0
+  inside: 0
+  team: -1
+--- !u!114 &114801333274084586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643643185422324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c315ccfa116382046a1ed0eba5995a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 0}
+  range: 4
+  speedCounter: 0
+  speed: 5
+  active: 1
+  soulName: Egg
+  lerpSwordColor: 1
+  soulColorA: {r: 0, g: 0, b: 0, a: 0}
+  heatColorA: {r: 0, g: 0, b: 0, a: 0}
+  soulColorB: {r: 0, g: 0, b: 0, a: 0}
+  heatColorB: {r: 0, g: 0, b: 0, a: 0}
+  mainColor:
+  - {r: 0.5, g: 0.3773585, b: 0.28537735, a: 1}
+  - {r: 0.41509432, g: 0.20713645, b: 0.17034532, a: 1}
+  - {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+  - {r: 0.4528302, g: 0.33535066, b: 0.40919495, a: 1}
+  subColor:
+  - {r: 0.96902657, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0.5707793, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0.026891708, a: 1}
+  - {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  detColor:
+  - {r: 0.2264151, g: 0.011370242, b: 0.0032039813, a: 1}
+  - {r: 0.2735849, g: 0.11938976, b: 0.11227306, a: 1}
+  - {r: 0.3679245, g: 0.24123353, b: 0.3299172, a: 1}
+  - {r: 0.28866798, g: 0.16019936, b: 0.4528302, a: 1}
+  powerColor:
+  - {r: 1, g: 0.99005884, b: 0.7688679, a: 1}
+  - {r: 0.7877358, g: 0.90926754, b: 1, a: 1}
+  - {r: 1, g: 0.7971698, b: 0.8009124, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  stagUIColor: []
+  symbol: {fileID: 21300000, guid: 6600df94176490146a55034f2c4abdf1, type: 3}
+  will: {fileID: 0}
+  body: {fileID: 0}
+  wielder: {fileID: 0}
+  life: {fileID: 0}
+  pNum: 0
+  fade: 0
+  myPlayer: {fileID: 0}
+  pAnim: {fileID: 0}
+  myCPU: {fileID: 0}
+  ic: {fileID: 0}
+  swordSprite: {fileID: 1330662676198932, guid: 78a16a5d0d7326040ba93abaa7b911ff,
+    type: 2}
+  soulStats: {fileID: 1402917544684320, guid: 5f9e06f29da9e2d418d5d875798fae81, type: 2}
+  fx: {fileID: 0}
+  dodgeParticle: {fileID: 0}
+  SwordAnim: {fileID: 0}
+  hitEffect: {fileID: 0}
+  attackWidth: 1
+  attackLength: 1
+  attackSpacing: -1
+  attackMulti: 3
+  attackMultiSpacing: 0
+  attackTaper: 0
+  attackDist: -1
+  maxStrikes: 360
+  damage: {x: 5, y: 12}
+  staggerDamage: {x: 25, y: 40}
+  staggerTime: 90
+  knockBackDamage: {x: 20, y: 45}
+  mass: {x: 0, y: 0}
+  swordWeight: 0
+  swordAccel: 0.05
+  speedBoost: 0
+  slowDown: 3
+  dodgeSpeed: 5
+  dodgeLength: 10
+  dodgeRecover: 10
+  dodgeStart: 2
+  dodgeWindow: 0.3
+  attackSpeed: {x: 1, y: 12}
+  chargedSpeed: {x: 2, y: 5}
+  slowSpeeds: {x: 0, y: 0}
+  fastSpeeds: {x: 0, y: 0}
+  bracePower: 2
+  swingAmount: 35
+  receiveHeat: 1
+  burnExemptParticles: 0
+  burningPoint: 80
+  freezingPoint: 0
+  climate: 50
+  energy: 0
+  baseEnergy: 50
+  burst: 3
+  bursting: 0
+  maxHeat: 125
+  burning: 0
+  heatSpeed: 1
+  chargeSpeed: 0.08
+  fullPower: 1
+  stats:
+  - damage
+  - stagger
+  - knockBack
+  multis:
+  - 1.2
+  - 1
+  - 2
+  burnDefenses: {x: 2.5, y: 1, z: 1}
+  description: Spreads its blade into 3 increasing power, but also the user opens
+    itself up to taking more damage.
+  swordAlpha: 1
+  gearHeatMod: 0
+  baseRange: 1
+  flareRange: 0
+  curGear: 1
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
+  - {r: 1, g: 0.98929787, b: 0, a: 1}
+  spread: 30
+  openSpeeds: 0400000008000000
+  normSpeeds: 
+  fanSpeed: 3

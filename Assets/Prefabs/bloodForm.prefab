@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1968819436093234}
+  m_IsPrefabParent: 1
+--- !u!1 &1968819436093234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4773707949529728}
+  - component: {fileID: 114049361857672832}
+  - component: {fileID: 114197278049331540}
+  - component: {fileID: 114583815509732556}
+  m_Layer: 0
+  m_Name: bloodForm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4773707949529728
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968819436093234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 83.247215, y: 41.33474, z: -0.021394797}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114049361857672832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968819436093234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5469bba5caa8245815faffd3fb8f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  color: {r: 0.6981132, g: 0.036222856, b: 0.036222856, a: 1}
+  spawned: 0
+  parent: {fileID: 0}
+  impenetratable: 0
+  unmovable: 0
+  dontLookAtMe: 0
+  unImportant: 0
+  active: 0
+  alive: 0
+  etheral: 0
+  hidden: 0
+  removeOnCol: 0
+  manyBodied: 0
+  invisible: 0
+  catchAll: 0
+  originPoint: {x: 0, y: 0}
+  centerPoint: {x: 0, y: 0}
+  body: []
+  direction: 0
+  height: -1
+  width: 0
+  length: 0
+  sprites: []
+  speed: 0
+  hyperSpeed: 0
+  speedCounter: 0
+  activeAction: []
+  effects: []
+  skin: {fileID: 0}
+  colActions: []
+  entActions: []
+  exiActions: []
+  dead: 0
+  xEdge: 0
+  yEdge: 0
+  curCollided: []
+  curEntered: []
+  floatStep: 1
+--- !u!114 &114197278049331540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968819436093234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ee26740e345a7439617dcba53574ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  tiles:
+  - {fileID: 1658041099318208, guid: 0a66cfa39bbc40b498060a2968e0a423, type: 2}
+  - {fileID: 1847717392107620, guid: ee15531147fd8c54e88c47c22f621792, type: 2}
+  - {fileID: 1876087036156840, guid: db03f8163fe9e8b49a160adb99a23be5, type: 2}
+  - {fileID: 1296024891276328, guid: ba0758a23d9c090418e8b2abfd06a5a5, type: 2}
+  - {fileID: 1559306504619556, guid: c015740775cddb44dafa1c74c74d9310, type: 2}
+  - {fileID: 1087701144307000, guid: c24e5af86af6d6c4d822ce5f1ccb887d, type: 2}
+  - {fileID: 1558630995348220, guid: 0dd6e0a6648a7a345a331dfba4874c08, type: 2}
+  - {fileID: 1896607554185732, guid: 7192a5fa5a2ba014fa60c81692ceff09, type: 2}
+  - {fileID: 1041783576060428, guid: 9353ae45117892c42bd0cbdd1ebe159e, type: 2}
+  - {fileID: 1839957941835188, guid: a1215d827bc7d7f4f83e9f810eb80914, type: 2}
+  - {fileID: 1223764995613900, guid: 56da97715b216014aad3524687549213, type: 2}
+  - {fileID: 1734860893195364, guid: c3b28604062f46847bb0edc199d6635c, type: 2}
+  - {fileID: 1478507552137294, guid: 8fc7ff94148a4224d828a5a9c39e86c6, type: 2}
+  - {fileID: 1421837649375286, guid: 5649e0eb101802543a39c4555c85967b, type: 2}
+  - {fileID: 1404031688428980, guid: 969030c2c22d1c24b8d36a5147d63fd4, type: 2}
+  set: []
+  size: {x: 7.7, y: 7.7}
+  color: {r: 0.8207547, g: 0.6236186, b: 0.3445621, a: 1}
+  sorting: -5
+--- !u!114 &114583815509732556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968819436093234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6518241159ffb54e87fbf7f07acd69c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 0}
+  range: 0
+  speedCounter: 0
+  speed: 0
+  active: 1
+  health: 0
+  maxHealth: 0
+  constitution: 1
+  conHits: 5
+  staggerThreshold: -1
+  recoverySpeed: 0
+  weight: -1
+  backStabDefense: 0
+  dodging: 0
+  poises: []
+  def: 1
+  kDef: 1
+  sDef: 1
+  dead: 0
+  hBar: {fileID: 0}
+  invulnerable: 1
+  damageText: {fileID: 0}
+  resumeAction: []
+  blood: {fileID: 0}
+  bloodMass: {fileID: 0}
+  corpse: {fileID: 0}
+  corpseHeight: 0
+  swordStuck: 0
+  staggerVul: 1
+  invulTime: 41
+  curCorpse: {fileID: 0}
+  power: 0
+  healthIcon: {fileID: 0}
+  isTarget: 0
+  removeOnMet: 1
+  master: {fileID: 0}
+  pos: {x: 0, y: 0}
+  turnOff: []
+  clearSpace: 0
+  killTarget: 0
+  spawned: 0
+  spreadChance: 1
+  body: []

@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1678276878237234}
+  m_IsPrefabParent: 1
+--- !u!1 &1678276878237234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4235574828949834}
+  - component: {fileID: 114529029656159938}
+  m_Layer: 0
+  m_Name: SwingNoCreep
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4235574828949834
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678276878237234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.7314692, y: 50.941456, z: 20.729916}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114529029656159938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678276878237234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771a9fd27a83bb44d8f59469032fef24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 0
+  pause: 0
+  speaker: 0
+  doorSpace: 5
+  leadUp: 0
+  image: {fileID: 0}
+  text:
+  - Geez it is a mess in here!
+  - Go grab that broom to clean up!
+  analog: []
+  key: []
+  waveText: []
+  afterText:
+  - Thats good enough for the likes of you, head on to the next room
+  afterImage: {fileID: 0}
+  pre: {fileID: 0}
+  next:
+  - {fileID: 1118449663314840, guid: 206e483204110194594240c5b0cf7ba8, type: 2}
+  storyPoint:
+  - {fileID: 1488697355385624, guid: 820cde190a957b64fa39733f66cc4166, type: 2}
+  myRoom: {fileID: 0}
+  read: 0
+  narrator: {fileID: 0}
+  roomType: 1
+  randomRoom: 0

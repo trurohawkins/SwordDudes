@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1323797418252248}
+  m_IsPrefabParent: 1
+--- !u!1 &1323797418252248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4879718363450476}
+  - component: {fileID: 114186206759722076}
+  - component: {fileID: 114916698625503228}
+  - component: {fileID: 114115283467119230}
+  - component: {fileID: 114521523545626108}
+  m_Layer: 0
+  m_Name: swordChunk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4879718363450476
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323797418252248}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 49.303116, y: 73.73783, z: -1.0782158}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114115283467119230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323797418252248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c549dbca36f024abc349e4a5d37fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  types:
+  - damage
+  - stagger
+  - stagTime
+  - knockBack
+  minValues:
+  - 0
+  - 0
+  - 0
+  - 0
+  maxValues:
+  - 0
+  - 0
+  - 0
+  - 0
+  values:
+  - 0
+  - 0
+  - 0
+  - 0
+  multi: []
+--- !u!114 &114186206759722076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323797418252248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825ad53cd964aa446b271b09d73118f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 0}
+  range: 0
+  speedCounter: 0
+  speed: 0
+  active: 1
+  blade: -1
+  segment: -1
+--- !u!114 &114521523545626108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323797418252248}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15642543b958857409d6a0c7d7909676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 0}
+  range: 4
+  speedCounter: 0
+  speed: 0
+  active: 1
+  origin: {x: -1, y: -1}
+  spreadSpeed: 0.5
+  spri: {fileID: 21300000, guid: 14e844b46abf0984f9768bee0f4bf0c7, type: 3}
+  color: {r: 1, g: 1, b: 0, a: 1}
+  startBurn: 0
+  curRange: 0
+  burning: 1
+  volume: []
+  sheathed: 0
+--- !u!114 &114916698625503228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323797418252248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5469bba5caa8245815faffd3fb8f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  color: {r: 1, g: 1, b: 1, a: 1}
+  spawned: 0
+  parent: {fileID: 0}
+  impenetratable: 0
+  unmovable: 0
+  dontLookAtMe: 0
+  unImportant: 0
+  active: 1
+  alive: 0
+  etheral: 0
+  hidden: 0
+  removeOnCol: 0
+  manyBodied: 0
+  catchAll: 0
+  originPoint: {x: 0, y: 0}
+  centerPoint: {x: 0, y: 0}
+  body: []
+  direction: 2
+  height: 15
+  width: 1
+  length: 1
+  sprites: []
+  speed: 5
+  hyperSpeed: 1
+  speedCounter: 0
+  activeAction: []
+  effects: []
+  skin: {fileID: 0}
+  colActions: []
+  entActions:
+  - {fileID: 114186206759722076}
+  exiActions:
+  - {fileID: 114186206759722076}
+  dead: 0
+  xEdge: 0
+  yEdge: 0
+  curCollided: []
+  curEntered: []
+  floatStep: 1

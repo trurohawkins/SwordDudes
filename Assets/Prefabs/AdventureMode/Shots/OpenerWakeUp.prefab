@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1696271523685024}
+  m_IsPrefabParent: 1
+--- !u!1 &1696271523685024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4331512114364300}
+  - component: {fileID: 114082711876394434}
+  m_Layer: 0
+  m_Name: OpenerWakeUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4331512114364300
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1696271523685024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 512, y: 384, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114082711876394434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1696271523685024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4144faa8357cac54eba0f57771174a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 1
+  pause: 0
+  speaker: 0
+  doorSpace: 5
+  leadUp: 0
+  image: {fileID: 21300000, guid: 14e844b46abf0984f9768bee0f4bf0c7, type: 3}
+  text:
+  - Hey...
+  - Hey...
+  - Wake Up!!!
+  - No more sleeping on the job haha
+  analog: []
+  key: []
+  waveText:
+  - Alright alright, you can walk but can you fight?
+  - grab that broom over there
+  afterText:
+  - You are a really good custodian, truly magnificent!
+  - Now if you could please go to the room to the West
+  - you have more training to do!
+  afterImage: {fileID: 0}
+  pre: {fileID: 0}
+  next:
+  - {fileID: 1752825541534716, guid: bc32a0082e68ba64493829e8f401f171, type: 2}
+  - {fileID: 1754863518514036, guid: c7f1e99651272a940aa2aab540090ac3, type: 2}
+  storyPoint:
+  - {fileID: 1665918297442702, guid: fef7784f0d6e41349bdac6213d4166b2, type: 2}
+  - {fileID: 1488697355385624, guid: 820cde190a957b64fa39733f66cc4166, type: 2}
+  myRoom: {fileID: 0}
+  read: 0
+  narrator: {fileID: 0}
+  roomType: 1
+  randomRoom: 0

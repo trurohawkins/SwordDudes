@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1770455116435908}
+  m_IsPrefabParent: 1
+--- !u!1 &1770455116435908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4135214614537800}
+  - component: {fileID: 114003036623606602}
+  m_Layer: 0
+  m_Name: tropicalStats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4135214614537800
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770455116435908}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 139.92073, y: 60.603855, z: -0.06640625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114003036623606602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770455116435908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a62551ab8fb134b82c581a6e5e81c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  combatDodgeP:
+  - 0
+  - 0
+  - 0.1
+  - 0.4
+  - 0.9
+  inPlaceDodgeP:
+  - 1
+  - 1
+  - 0.8
+  - 0.5
+  - 0
+  dodgePathP:
+  - 0.01
+  - 0.3
+  - 0.5
+  - 0.8
+  - 1
+  moveDodgeP:
+  - 0
+  - 0.01
+  - 0.1
+  - 0.2
+  - 0.4
+  moveDodgeCheckP:
+  - 0
+  - 0
+  - 0.3
+  - 0.6
+  - 1
+  circleDodgeP:
+  - 0
+  - 0
+  - 0.1
+  - 0.3
+  - 0.7
+  wallDodgeStick:
+  - 0.99
+  - 0.6
+  - 0.5
+  - 0.3
+  - 0
+  dodgeAccuracy:
+  - 90
+  - 50
+  - 40
+  - 10
+  - 0
+  creeping:
+  - 0.2
+  - 0.05
+  - 0.01
+  - 0
+  - 0
+  misBurnP:
+  - 1
+  - 0.4
+  - 0.2
+  - 0.1
+  - 0
+  runFromBurnP:
+  - 0
+  - 0
+  - 0.2
+  - 0.8
+  - 1
+  overrideRanges:
+  - 0
+  - 0
+  misRangeAccuracy:
+  - 0.5
+  - 1.2
+  - 0.9
+  - 1
+  - 1
+  swingDirectionAccuracy:
+  - 0.1
+  - 0.3
+  - 0.7
+  - 0.8
+  - 1
+  swingInterval:
+  - 60
+  - 50
+  - 55
+  - 21
+  - 5
+  swingLengthAccuracy:
+  - 0.1
+  - 0.1
+  - 0.2
+  - 0.8
+  - 1
+  swingInvulWait:
+  - 0
+  - 0
+  - 0.1
+  - 0.3
+  - 1
+  walkIntoDes:
+  - 0.7
+  - 0.5
+  - 0.3
+  - 0
+  - 0
+  adjOrder: 
+  distOrder: 
+  wantToBurn: 0
+  runAndBurn: 0
+  rangedAttack:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  runIfNotPowered: 1
+  dontAdjust: 0
+  pathingInterval:
+  - 15
+  - 10
+  - 5
+  - 2
+  - 1
+  bodyInterval:
+  - 40
+  - 30
+  - 10
+  - 5
+  - 2
+  burnAdj: -1
+  heatUnderBurn: -1
+  burnNoMatter: 0
+  ignoreBurning: 0

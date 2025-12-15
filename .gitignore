@@ -1,0 +1,33 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# MemoryCaptures can get large
+[Mm]emoryCaptures/
+
+# Recordings
+[Rr]ecordings/
+
+# Asset meta data should only be ignored when the corresponding asset is ignored
+!/[Aa]ssets/**/*.meta
+!/[Pp]roject[Ss]ettings/**/*.asset
+
+# Rider
+.idea/
+*.sln
+*.csproj
+*.unityproj
+*.user
+*.userprefs
+
+# Visual Studio cache
+.vs/
+
+# OS files
+.DS_Store
+Thumbs.db
+

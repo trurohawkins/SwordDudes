@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1398566957698014}
+  m_IsPrefabParent: 1
+--- !u!1 &1398566957698014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4738750675845142}
+  - component: {fileID: 114956307279732308}
+  m_Layer: 0
+  m_Name: firstBattle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4738750675845142
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398566957698014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.7314692, y: 50.941456, z: 20.729916}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114956307279732308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398566957698014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6316bb083e50584880149a37c365b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 1
+  pause: 1
+  doorSpace: 5
+  leadUp: 0
+  image: {fileID: 0}
+  text:
+  - See! Its more of them, please take care of them as well
+  - Just think of them like trash that you, the custodian are taking out HAHAHA!
+  - Dont Forget! use -swing- to attack them
+  - and -dodge- to dodge through walls and avoid their attacks!
+  afterText:
+  - You did a good job! Maybe now is a good time to take a break,
+  - tomorrow I am sure there will be more messes to clean up
+  waveText:
+  - Oh fuck there are more, they look tough, but I believe in you!
+  pre: {fileID: 0}
+  next:
+  - {fileID: 1758655688110606, guid: 2cb9458753b25a94a84c59c51260ff14, type: 2}
+  storyPoint: {fileID: 0}
+  myRoom: {fileID: 0}
+  read: 0
+  narrator: {fileID: 0}
+  roomType: 1
+  randomRoom: 0

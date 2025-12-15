@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1672109104294596}
+  m_IsPrefabParent: 1
+--- !u!1 &1672109104294596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4718616646305250}
+  - component: {fileID: 114031658052608992}
+  m_Layer: 0
+  m_Name: LearnHeat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4718616646305250
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672109104294596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 93.41824, y: 556.5681, z: 25.36549}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114031658052608992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672109104294596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e429c48722019744a7d3996ca29e6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 0
+  pause: 1
+  speaker: 0
+  doorSpace: 15
+  leadUp: 0
+  image: {fileID: 0}
+  text:
+  - 'woah what happened to you? '
+  - That new broom looks kinda shoddy
+  - (2)There is great power in this sword, when you swing it builds up heat!
+  - when you build up enough heat your sword ignites, becoming stronger, but also
+    burning you
+  - break the target in front of you with your burning sword
+  analog: []
+  key: []
+  waveText: []
+  afterText: []
+  afterImage: {fileID: 0}
+  pre: {fileID: 0}
+  next:
+  - {fileID: 1422651649897836, guid: 3229ff5579a82f84e957a3e1cea83c3c, type: 2}
+  storyPoint:
+  - {fileID: 1265786773966300, guid: 9f915861f2a55d0448ff87b02c7138a9, type: 2}
+  myRoom: {fileID: 0}
+  read: 0
+  narrator: {fileID: 0}
+  roomType: 1
+  randomRoom: 0

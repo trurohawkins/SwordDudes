@@ -1,0 +1,4 @@
+repository "Sword Dudes@Tru_Hawkins@cloud"
+  path "/"
+    br "/main"
+    co "/main"

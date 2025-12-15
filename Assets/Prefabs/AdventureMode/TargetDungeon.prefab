@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1096217392376844}
+  m_IsPrefabParent: 1
+--- !u!1 &1096217392376844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4867205809924980}
+  - component: {fileID: 114746462208691368}
+  - component: {fileID: 114488664070036032}
+  m_Layer: 0
+  m_Name: TargetDungeon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4867205809924980
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1096217392376844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 145.70421, y: 82.593956, z: 0.15470289}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114488664070036032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1096217392376844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c66713edcac01a4c9bd313161ec78bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curBumps: 0
+  curCreep: 0
+  seconds: 0
+  thruWalls: 0
+  numSwings: 0
+  damageDealt: 0
+  knockedBack: 0
+  swordKnock: 0
+  curStaggers: 0
+  numHits: 0
+  numMisses: 0
+  beat: 0
+  init: 0
+--- !u!114 &114746462208691368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1096217392376844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b1625a501090245880a5aa67d4c992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos: {x: 0, y: 0}
+  beat: 0
+  readyToGo: 0
+  closeDoor: 0
+  neighbors: []
+  doors: 
+  numNeigh: 4
+  creator: {fileID: 0}
+  dm: {fileID: 0}
+  door: {fileID: 1212387083772670, guid: 9d97a386c0f1f5b4098fc115a8b1532f, type: 2}
+  poles: []
+  guy: {fileID: 1863329632742904, guid: 11914820d0e54ca48bb284c3ea44c571, type: 2}
+  targetCount: 0
+  denizens: []
+  doorSpace: 5
+  grd: {fileID: 0}
+  getPrize: 0
+  doorPercent: 1
+  challengeType: 0
+  floor: 5
+  wallColor: {r: 0.30025092, g: 0.20581168, b: 0.3490566, a: 1}
+  myShot: {fileID: 0}
+  setUp: 0
+  roomNum: {x: 3, y: 3}
+  cardinalsOnly: 0
+  spawnInHallList: []
+  spawnInRoomList: []
+  dodgeWallChance: 0
+  sameDistanceThreshold: 2
+  debrisCount: 0
+  floorSwitch: {fileID: 1363720879279420, guid: 2828bac97d0662948b31a5ebe7b53427,
+    type: 2}
+  maxDirt: 2
+  dirtHallChance: 0
+  monsterLevel: 2

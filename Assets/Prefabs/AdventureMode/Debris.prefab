@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1634529941567074}
+  m_IsPrefabParent: 1
+--- !u!1 &1634529941567074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4395294769204668}
+  - component: {fileID: 114826214822192378}
+  - component: {fileID: 114500416331091048}
+  - component: {fileID: 114105656295068806}
+  m_Layer: 0
+  m_Name: Debris
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4395294769204668
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634529941567074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 134, y: 87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114105656295068806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634529941567074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ee26740e345a7439617dcba53574ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: -1
+  tiles:
+  - {fileID: 1219227932309022, guid: 33a4665017e7d8d4f93b38272dd660c9, type: 2}
+  - {fileID: 1486081512041928, guid: 0a49538c1d33c154699da388359d5e45, type: 2}
+  - {fileID: 1727588988508736, guid: a1f3573a9327e0a4d8f391511ccc0c3f, type: 2}
+  - {fileID: 1765632732579564, guid: bdfb54eb8a3d40f4b85895e6cc17ce4c, type: 2}
+  - {fileID: 1499419985469484, guid: 6eb0209f4242b484c90896c20af1854b, type: 2}
+  - {fileID: 1413010271520806, guid: b2f4b002604db6b4a869efdd398066a9, type: 2}
+  - {fileID: 1411313652300562, guid: 839bc1010fb88e14b856aa3a9f838a11, type: 2}
+  - {fileID: 1310240312920632, guid: 726dd8891a27d0a4eb8585d80a856111, type: 2}
+  - {fileID: 1701004002840276, guid: 9cc7de7b2273d7e488d37e04dadf440c, type: 2}
+  - {fileID: 1485392263154152, guid: fe5bed36d80f6ca4dab75286b2160203, type: 2}
+  - {fileID: 1053813825652240, guid: 6a4a3687274b3794380ed6c79741b996, type: 2}
+  - {fileID: 1280742359731390, guid: f08601be7b8f3284a801ada1bd6a9a3e, type: 2}
+  - {fileID: 1413058438816088, guid: 1e83bdfedb7b69a4a99166674f38675b, type: 2}
+  - {fileID: 1088146515292240, guid: fb979effd920be149b154e6da93ac896, type: 2}
+  - {fileID: 1515946818208272, guid: c6518759392a0774ba4d51a7d61f98ab, type: 2}
+  set: []
+  cornerPriority: 0
+  size: {x: 7.69, y: 7.69}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  sorting: -5
+--- !u!114 &114500416331091048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634529941567074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2bdff8e6124e34ea01491a2969f6cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 0}
+  range: 0
+  speedCounter: 0
+  speed: 0
+  active: 1
+  health: 0
+  maxHealth: 0
+  constitution: 1
+  conHits: 5
+  staggerThreshold: -1
+  recoverySpeed: 0
+  weight: 0
+  backStabDefense: 0
+  dodging: 0
+  poises: []
+  def: 1
+  kDef: 1
+  sDef: 1
+  dead: 0
+  hBar: {fileID: 0}
+  invulnerable: 0
+  damageText: {fileID: 0}
+  resumeAction: []
+  blood: {fileID: 0}
+  bloodMass: {fileID: 0}
+  corpse: {fileID: 0}
+  corpseHeight: 0
+  swordStuck: 0
+  staggerVul: 1
+  invulTime: 41
+  curCorpse: {fileID: 0}
+  power: 0
+  healthIcon: {fileID: 0}
+  isTarget: 0
+  removeOnMet: 0
+  master: {fileID: 0}
+  pos: {x: 0, y: 0}
+  turnOff: []
+  clearSpace: 0
+  killTarget: 0
+  spawned: 0
+  searchForSpot: 0
+  spreadChance: 0.8
+  body: []
+  damage: 0.1
+  cleanPercent: 0.25
+--- !u!114 &114826214822192378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634529941567074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5469bba5caa8245815faffd3fb8f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  debugDraw: 0
+  color: {r: 0.5471698, g: 0.3960313, b: 0.31746173, a: 1}
+  spawned: 0
+  parent: {fileID: 0}
+  impenetratable: 0
+  unmovable: 0
+  dontLookAtMe: 0
+  unImportant: 0
+  active: 0
+  alive: 0
+  gaseous: 0
+  etheral: 0
+  hidden: 0
+  removeOnCol: 0
+  manyBodied: 1
+  invisible: 0
+  catchAll: 0
+  originPoint: {x: 0, y: 0}
+  centerPoint: {x: 0, y: 0}
+  body: []
+  direction: 0
+  height: 5
+  width: 1
+  length: 1
+  sprites: []
+  speed: 0
+  hyperSpeed: 4
+  speedCounter: 0
+  activeAction: []
+  effects: []
+  skin: {fileID: 0}
+  colActions: []
+  entActions:
+  - {fileID: 114500416331091048}
+  exiActions: []
+  dead: 0
+  xEdge: 0
+  yEdge: 0
+  curCollided: []
+  curEntered: []
+  floatStep: 1

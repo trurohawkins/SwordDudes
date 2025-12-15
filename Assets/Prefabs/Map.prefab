@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1880269101487344}
+  m_IsPrefabParent: 1
+--- !u!1 &1880269101487344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4977302928725348}
+  - component: {fileID: 114446800548911776}
+  - component: {fileID: 114178845622056210}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4977302928725348
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1880269101487344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114178845622056210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1880269101487344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 317184547bd8fce4da5c5bf9be735963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawns: []
+  lava: {fileID: 1673639023812076, guid: 89779821d4c92a84683b3b8c4de624ac, type: 2}
+  water: {fileID: 1999811342226274, guid: 845b6853bac69d848807515abd3490af, type: 2}
+  woodFloor: {fileID: 1483448436916720, guid: 843b0e6110ca4ba4f95ae0a40f13daf9, type: 2}
+  rock: {fileID: 1616508988662758, guid: 293f2f0e3bfec8d4b973e7f8d15f629a, type: 2}
+  ruin: {fileID: 1588593294773694, guid: d9d269f4f8c6ebc4dac9b97bbc5afc1b, type: 2}
+  floors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.8301887, g: 0.78151864, b: 0.48949805, a: 1}
+  - {r: 0.24528301, g: 0.14309636, b: 0.035866853, a: 1}
+  - {r: 0.1320959, g: 0.2924528, b: 0.034487356, a: 1}
+  forceSpawn: 0
+  forceSpawns:
+  - {x: 39, y: 45}
+  - {x: 39, y: 155}
+  floor: {fileID: 1050571839809826, guid: ed9968bb9805bc04396324209095962b, type: 2}
+  pathParent: {fileID: 1719897081946176, guid: 6a91062b142792e479e17ee66497d643, type: 2}
+  node: {fileID: 1263806127847218, guid: cf0e52ad6c554134ba295204178bcce3, type: 2}
+--- !u!114 &114446800548911776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1880269101487344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202c7770f0ac0ea45ba5b9163b734691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seed: 0
+  flowing: 1
+  worldSizeX: 220
+  worldSizeY: 190
+  distanceDelayMultiplier: 3
+  activeZone: 25
+  forms: []
+  allSprites: []
+  brains: []
+  DebugCell: {fileID: 1000046959900748, guid: 2a78e333a5a2a7e42b6f8cb162777b7c, type: 2}
+  voidForm: {fileID: 1145456012160466, guid: 4af3025b661fc014781625cfb9e623f7, type: 2}
+  terrain: {fileID: 0}
+  letsGo: 0

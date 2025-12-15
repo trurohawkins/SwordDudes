@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1774678700772646}
+  m_IsPrefabParent: 1
+--- !u!1 &1774678700772646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4211895464998938}
+  - component: {fileID: 114286710023600398}
+  m_Layer: 0
+  m_Name: GameInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4211895464998938
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1774678700772646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114286710023600398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1774678700772646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c98808913b5528a478e91b8be7fc3137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiPlayer: 1
+  preFixed: 1
+  numPlayers: 2
+  playerColors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.07066631, g: 0, b: 1, a: 1}
+  - {r: 1, g: 0.8950032, b: 0, a: 1}
+  - {r: 0.18424833, g: 0.6509434, b: 0, a: 1}
+  controls: 01000000020000000200000002000000
+  controlNums: 00000000000000000100000001000000
+  teamNums: 00000000010000000200000003000000
+  songs: 02000000020000000400000004000000
+  colors: 01000000010000000200000003000000
+  locked: 00000000000000000000
+  p1Pad: 1
+  p1ControlNum: -1
+  p1Song: 5
+  p2Pad: 0
+  p2ControlNum: -1
+  p2Song: 5
+  level: 1
+  names:
+  - TINY
+  - MURKY
+  - THUNDER STORM
+  - ANTIQUE
+  - DESERT SPIRE
+  - TROPICAL
+  - BOILNG
+  - FIRE LIGHT
+  - COLD BLOOD & BONE
+  - INDUSTRIAL
+  souls:
+  - {fileID: 1643643185422324, guid: 52ab31832de64c74ea125f005b6f1e37, type: 2}
+  - {fileID: 1925969601601042, guid: b8406172810d8584985ff0843af8654d, type: 2}
+  - {fileID: 1294819394461560, guid: 8beb734d4d105d645bf572b407d5d623, type: 2}
+  - {fileID: 1456039467350972, guid: 4c597dc5149b80c46b8f1b399beba955, type: 2}
+  - {fileID: 1348837756165906, guid: c2c614f6cd929d4458d8f721404423ed, type: 2}
+  - {fileID: 1758741324564926, guid: e6f68737001bfdf48babb702b6fa81a3, type: 2}
+  - {fileID: 1165789339866804, guid: f570b2931dfb64b40850ea985a28d390, type: 2}
+  - {fileID: 1589366456670522, guid: b6d9d1f4c7aed044c8c4bd0b93ffae57, type: 2}
+  - {fileID: 1752815216565400, guid: 92a05cdac796bb344b00a0f1dd437984, type: 2}
+  - {fileID: 1552953477405692, guid: ed9ce9fae09b7aa4a9835db3fc0b113d, type: 2}
+  levels:
+  - THE VOID
+  - CASTLE
+  - RUINS
+  - LAVA PIT
+  pSprites:
+  - {fileID: 21300000, guid: 01dd05579c10e214aaa5e39ae8ba793a, type: 3}
+  - {fileID: 21300000, guid: 4229e6e59b2aca441a52c3c7fca1909e, type: 3}
+  - {fileID: 21300000, guid: 7426f57a7ae744746ba46b45c046f095, type: 3}
+  - {fileID: 21300000, guid: e76fe9d7fa506794f9bbfeaef6c6ebbe, type: 3}
+  symbols:
+  - {fileID: 21300000, guid: cdee89aeefe83b44bb0fc72e0508998b, type: 3}
+  - {fileID: 21300000, guid: 0e32e128242404e4b84653d51fa6137a, type: 3}
+  - {fileID: 21300000, guid: 7b94833d045aaeb4baf63e7aa57afddc, type: 3}
+  - {fileID: 21300000, guid: 3969f9afc8618c04589fa8dbdf707a54, type: 3}
+  - {fileID: 21300000, guid: cf43c662d2050f94fbe4d4dc2c0e0fe1, type: 3}
+  - {fileID: 21300000, guid: 710eb9935d664a34ba049240451a549e, type: 3}
+  - {fileID: 21300000, guid: 7d11d4f5a45cf524389935ea74a7e132, type: 3}
+  - {fileID: 21300000, guid: bb71253b85f799f40ba6bd9ef5e0bd52, type: 3}
+  - {fileID: 21300000, guid: a81c49be10927c84683353e9036e3ed3, type: 3}
+  - {fileID: 21300000, guid: 191ec0a55f48cc7478df9947f9ec7de3, type: 3}
+  enemyLevel: 0
+  maxEnemyLevel: 3
+  control: {fileID: 1981375751962910, guid: 1f321aa1d02a2f749a3ded01a9073ffc, type: 2}

@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1588593294773694}
+  m_IsPrefabParent: 1
+--- !u!1 &1588593294773694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4785942520071240}
+  - component: {fileID: 114059307264525416}
+  - component: {fileID: 114372291746898588}
+  m_Layer: 0
+  m_Name: ruin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4785942520071240
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1588593294773694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 62.14317, y: 4.2544403, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114059307264525416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1588593294773694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5469bba5caa8245815faffd3fb8f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: -1
+  color: {r: 0.754717, g: 0.7369171, b: 0.7369171, a: 1}
+  spawned: 0
+  parent: {fileID: 0}
+  impenetratable: 0
+  unmovable: 0
+  dontLookAtMe: 0
+  unImportant: 0
+  active: 0
+  alive: 0
+  etheral: 0
+  hidden: 0
+  removeOnCol: 0
+  manyBodied: 0
+  catchAll: 0
+  originPoint: {x: 0, y: 0}
+  centerPoint: {x: 0, y: 0}
+  body: []
+  direction: 0
+  height: 100
+  width: 0
+  length: 0
+  sprites: []
+  speed: 0
+  hyperSpeed: 4
+  speedCounter: 0
+  activeAction: []
+  effects: []
+  skin: {fileID: 0}
+  colActions: []
+  entActions: []
+  exiActions: []
+  dead: 0
+  xEdge: 0
+  yEdge: 0
+  curCollided: []
+  curEntered: []
+  floatStep: 1
+--- !u!114 &114372291746898588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1588593294773694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504dd812606c8864baa645522c120ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set0:
+  - {fileID: 21300000, guid: 3169057085c932942bd58db48f332b8b, type: 3}
+  - {fileID: 21300000, guid: 2ece0c883738cdc44826b1eb55aad687, type: 3}
+  - {fileID: 21300000, guid: 39e6f0d84fac6c84e98ffc441d7bc93d, type: 3}
+  - {fileID: 21300000, guid: 142f44562839ad74e8db921b18627112, type: 3}
+  set1:
+  - {fileID: 21300000, guid: 392ec53624b4c4f469575528c6681a50, type: 3}
+  - {fileID: 21300000, guid: fdc587e7cf61a3247bbd48f74a16b548, type: 3}
+  - {fileID: 21300000, guid: a87fd5ab628031048ac5ee02483c7fb1, type: 3}
+  set2:
+  - {fileID: 21300000, guid: 723baf44e49616b43bec1eb05ccb7df6, type: 3}
+  - {fileID: 21300000, guid: 5df7cd0975ed9374bbae81f2831ee911, type: 3}
+  - {fileID: 21300000, guid: 1c49a01c379444a439aeb7dad210f4c2, type: 3}
+  set3:
+  - {fileID: 21300000, guid: 8f38a8d695aafad4aa16358606f5f9dd, type: 3}
+  size: 5
+  edgePriority: 0
+  tileColor: {r: 1, g: 1, b: 1, a: 1}
