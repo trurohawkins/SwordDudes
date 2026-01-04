@@ -550,9 +550,7 @@ public class Player : Purpose {
 			//}
 			//body.forceMove (body.centerPoint + GM.S.dirs [body.direction], false);
 			Vector2Int pre = body.centerPoint;
-			Debug.Log("was at " + pre);
 			body.forceMove (body.direction);
-			Debug.Log("nw at " +  self.centerPoint);
 			if (myAttack) {
 				myAttack.forceMove ();
 			}
@@ -1103,7 +1101,7 @@ public class Player : Purpose {
 		*/
 	}
 
-	public void respawn(Vector3Int sp, bool reset, bool fullHealth){
+	public void respawn(Vector3Int sp, bool reset, bool fullHealth) {
 		body.dead = false;
 		moving = false;
         Vector2Int spawnPos = new Vector2Int(sp.x, sp.y);

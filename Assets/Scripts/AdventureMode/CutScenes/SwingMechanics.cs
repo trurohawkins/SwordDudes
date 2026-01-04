@@ -20,20 +20,23 @@ public class SwingMechanics : Shot {
         room.connectRoom(corners[3], corners[1]);
 
         int timer = 25;
-        room.dm.spawnTarget(0, timer, new Vector2Int(center.x + 5, center.y + 5), room);
-        room.dm.spawnTarget(0, timer, new Vector2Int(center.x - 5, center.y - 5), room);
-
+        DungeonObject dun = room.dm.spawnTarget(0, timer, new Vector2Int(center.x + 5, center.y + 5), room);
+        dun.partOfWave = true;
+        dun = room.dm.spawnTarget(0, timer, new Vector2Int(center.x - 4, center.y - 4), room);
+        dun.partOfWave = true;
+       
         //room.newWave();
+        
         for (int i = 0; i < corners.Count; i++) {
-            DungeonObject dun = room.dm.spawnKnocker(corners[i].x, corners[i].y, room);
+            dun = room.dm.spawnKnocker(corners[i].x, corners[i].y, room);
             room.addToWave(dun);
             Enemy mon = dun.GetComponent<Enemy>();
             mon.setStats(0.2f);
             mon.setAttackLengthRange(0.75f);
             mon.setKnockback(0.1f);
         }
+        
         room.getPrize = true;
-        //room.dm.progress++;
     }
 
     public override void roomBeat(DungeonRoom room) {

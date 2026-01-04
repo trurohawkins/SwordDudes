@@ -34,8 +34,14 @@ public class LearnAboutHeat : Shot {
         Debug.Log(a + " " + b);
         room.connectRoom(a, b);
         room.connectRoom(c, d);
+        int heat = 10;
         Obstacle ob = room.dm.spawnTarget(2, -1, center + new Vector2Int(0, -6), room).GetComponent<Obstacle>();
+        ob.setHeat(heat);
+        ob.partOfWave = true;
+        ob = room.dm.spawnTarget(2, -1, center + new Vector2Int(0, 6), room).GetComponent<Obstacle>();
+        ob.setHeat(heat);
         igDia.check = ob;
+        ob.partOfWave = true;
         DungeonObject dunA = room.dm.makeEnemy(a.x, a.y, room);
         DungeonObject dunB = room.dm.makeEnemy(b.x, b.y, room);
 

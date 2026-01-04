@@ -348,7 +348,6 @@ public class Root : SwordSoul {
     public void setGrowth(int g) {
 		will.range = grown = g;
 		float perc = (float)g / (float)maxGrowth;
-		Debug.Log("new length at " + perc + "%");
 		int min = (int)Mathf.Lerp(attackSpeed[0], chargedSpeed[0], 1.0f - perc);
 		int max = (int)Mathf.Lerp(attackSpeed[1], chargedSpeed[1], 1.0f - perc);
 		will.baseSpeedChange(min, max);

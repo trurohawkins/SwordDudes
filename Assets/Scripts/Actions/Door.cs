@@ -16,10 +16,8 @@ public class Door : DungeonObject {
     }
 
     public override void callAction(Form poo, int state, int x, int y) {
-        Debug.Log("acted upon");
         if (!locked && active) {
             if (poo.id == 1) { // && state == 0) {
-                Debug.Log("door destroying world");
                 GM.S.destroyWorld(dir);
                 //active = false;
             }

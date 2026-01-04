@@ -19,8 +19,10 @@ public class Obstacle : DungeonObject {
     int ht = 0;
     bool badCon;
     int bHeight;
+    int myWave = -1;
 
     public override bool spawnIn() {
+        myWave = master.waves.Count;
         if (!base.spawnIn()) {
             return false;
         } else {
@@ -50,6 +52,14 @@ public class Obstacle : DungeonObject {
         if (!dead && !invulnerable && !self.dead) {
             	Value v = enemy.GetComponent<Value> ();
 			    if (v && !v.onTeam(team)) {
+                	attackChunk ac = enemy.GetComponent<attackChunk>();
+			        circleAttack ca = null;
+			        if (ac) {
+				        ca = ac.getAttack();
+			        }
+                    if (ca) {
+					    ca.getSoul().hitBody(this);
+			        }
             		if (Grader.S) {
 					    Grader.S.makeHit(enemy, calculateDamage(enemy), 0);
 				    }
@@ -75,17 +85,6 @@ public class Obstacle : DungeonObject {
                 self.height = 0;
             }
         }
-        /*
-        base.callAction(enemy, state, x, y);
-        if (self.dead && conditionMet) {
-            if (curCorpse) {
-                beatTarget bt = curCorpse.GetComponent<beatTarget>();
-                bt.setConditions(condition, timeReset);
-                bt.receiveMaster(master);
-            }
-            master.targetMet(this);
-        }
-        */
     }
 
     bool goodBeat = false;
@@ -95,10 +94,8 @@ public class Obstacle : DungeonObject {
             if (ht > 0) {
                 ht--;
             } else {
-                //base.callAction(curHit, 0, 0, 0);
                 if (self.dead) {// && conditionMet) {
                     target.sprite = null;
-                    
                     if (timeReset != -1) {
                         timer = timeReset;
                     } else {
@@ -118,8 +115,8 @@ public class Obstacle : DungeonObject {
             }
         }
         if (timer > 0) {
-            if (master.beat) {
-                goodBeat = master.beat;
+            if (master.beat || myWave != master.waves.Count) {
+                goodBeat = true;
             }
             if (goodBeat) {
                 indicator.sprite = faces[2];
@@ -186,6 +183,7 @@ public class Obstacle : DungeonObject {
         */
     }
 
+
     void sadFace() {
         if (indicator) {
             indicator.sprite = faces[1];
@@ -194,6 +192,10 @@ public class Obstacle : DungeonObject {
         }
         badCon = true;
         ht = hitTimer;
+    }
+
+    public void setHeat(int heat) {
+        bodyHeat = heat;
     }
 
     public void getIndicator(SpriteRenderer sr) {

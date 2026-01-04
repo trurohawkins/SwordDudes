@@ -598,9 +598,6 @@ public class Form : MonoBehaviour {
 
 	public void leaveSpace() {
 		for (int i = 0; i < body.Length; i++) {
-			if (id == 1) {
-				Debug.Log("   leaving: " + (centerPoint.x + body[i].x) + ", " + (centerPoint.y + body[i].y));
-			}
 			//Debug.Log("before:" + Map.S.world[originPoint.x + body [i].x, originPoint.y + body [i].y].within.Count);
 			Map.S.world [centerPoint.x + body [i].x, centerPoint.y + body [i].y].formLeave (this);
 			//Debug.Log("after" + Map.S.world[originPoint.x + body [i].x, originPoint.y + body [i].y].within.Count);
@@ -921,9 +918,6 @@ public class Form : MonoBehaviour {
 			for (int i = 0; i < body.Length; i++) {
 				int x = body [i].x + centerPoint.x;
 				int y = body [i].y + centerPoint.y;
-				if (id == 1) {
-					Debug.Log(" drawing at " + x + ", " + y);
-				}
 				if (x > -1 && x < Map.S.worldSizeX && y > -1 && y < Map.S.worldSizeY) {
 					Map.S.world [x, y].formEnter (this);
 				} else {

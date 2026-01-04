@@ -17,9 +17,10 @@ public class WakeUp : Shot {
         //dun.pos = new Vector2Int(sp.x, sp.y);// new Vector2Int(50, 45);
         StoryPoint stry = dun.GetComponent<StoryPoint>();
         stry.getDialogue(narrator.dia);
-        TargetRoom tr = room.GetComponent<TargetRoom>();
+        
         spawnStoryPoint(storyPoint[1], 15, center.y);
 
+        TargetRoom tr = room.GetComponent<TargetRoom>();
         tr.dm.spawnWalk(new Vector2Int(45, 45), 40, 40, tr);
         //room.newWave();
         dun = room.dm.spawnLitterEnemy((int)(Map.S.worldSizeX * 0.75f), center.y,  room);

@@ -353,4 +353,8 @@ public class Grader : MonoBehaviour {
             curRoom.curStaggers++;
         }
     }
+
+    public Grade getCurRoom() {
+        return curRoom;
+    }
 }

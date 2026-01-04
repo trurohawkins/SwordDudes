@@ -128,9 +128,9 @@ MonoBehaviour:
   backStabDefense: 0
   dodging: 0
   poises: []
-  def: 1
-  kDef: 1
-  sDef: 1
+  def: 0
+  kDef: 0
+  sDef: 0
   dead: 0
   hBar: {fileID: 0}
   invulnerable: 0
@@ -158,6 +158,7 @@ MonoBehaviour:
   killTarget: 0
   spawned: 0
   searchForSpot: 0
+  partOfWave: 0
 --- !u!114 &114342639355811306
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -75,7 +75,7 @@ MonoBehaviour:
   next:
   - {fileID: 1324584055162566, guid: b3991a5d73282924b9ba2d05f883a86b, type: 2}
   storyPoint:
-  - {fileID: 0}
+  - {fileID: 1137921031318516, guid: dc8239064d6a09646aa5b2845deeca49, type: 2}
   myRoom: {fileID: 0}
   read: 0
   narrator: {fileID: 0}

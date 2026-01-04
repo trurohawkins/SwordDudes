@@ -65,7 +65,7 @@ MonoBehaviour:
   afterImage: {fileID: 0}
   pre: {fileID: 0}
   next:
-  - {fileID: 1118449663314840, guid: 206e483204110194594240c5b0cf7ba8, type: 2}
+  - {fileID: 1672109104294596, guid: 4c9989ae6e7d43945ba64d00b3612817, type: 2}
   storyPoint: []
   myRoom: {fileID: 0}
   read: 0

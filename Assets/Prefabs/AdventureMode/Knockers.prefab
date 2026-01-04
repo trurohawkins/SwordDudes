@@ -491,13 +491,13 @@ MonoBehaviour:
   speedRange: {x: 5, y: 1}
   attIntervalRange: {x: 15, y: 0}
   attRangeRange: {x: 2, y: 10}
-  attLenRange: {x: 50, y: 5}
+  attLenRange: {x: 200, y: 50}
   damageRange: {x: 15, y: 30}
   KnockRange: {x: 25, y: 100}
   stagRange: {x: 15, y: 35}
   attackSpeedRange: {x: 0, y: 0}
   attackDieOnImpact: 0
-  attackPoint: 0.2
+  attackPoint: 0.8
   followAttack: 1
   senseRange: 30
   moveAndShoot: 0
@@ -706,6 +706,7 @@ MonoBehaviour:
   killTarget: 1
   spawned: 0
   searchForSpot: 1
+  partOfWave: 0
 --- !u!114 &114874006296199318
 MonoBehaviour:
   m_ObjectHideFlags: 1

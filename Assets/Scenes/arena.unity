@@ -1565,12 +1565,12 @@ Prefab:
     - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
         type: 2}
       propertyPath: controls.Array.data[1]
-      value: -5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
         type: 2}
       propertyPath: controls.Array.data[0]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
         type: 2}

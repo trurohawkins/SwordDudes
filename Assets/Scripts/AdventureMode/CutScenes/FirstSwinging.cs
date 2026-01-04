@@ -16,10 +16,13 @@ public class FirstSwinging : Shot {
 
     public override void shapeRoom(DungeonRoom room, mapTerrain creator, int dir) {
         
-        room.setHallSize(8, 12);
+        room.setHallSize(9, 14);
         room.setDoorSpace(5);
         int sx = Map.S.worldSizeX;
         int sy = Map.S.worldSizeY;
+        DungeonObject dun = room.logObj(storyPoint[0]);
+        StoryPoint stry = dun.GetComponent<StoryPoint>();
+        stry.getDialogue(narrator.dia);
         //room.doors[1] = room.doors[3] = true;
         List<Vector2Int> enemySpawns = new List<Vector2Int>();
         if (dir == 0) {
@@ -40,15 +43,6 @@ public class FirstSwinging : Shot {
             creator.clearCircle(circle, size);
             creator.fillCircle(circle, size - 12);
             creator.clearCircle(circle, size - 22);
-            //creator.clearRect(new Vector2Int(45, 58), 70, 55);
-                    /*
-            TargetRoom tr = room.GetComponent<TargetRoom>();
-
-            if (tr) {
-                tr.dm.spawnTarget(0, -1, new Vector2Int(11, 12), tr);
-                tr.dm.spawnTarget(0, -1, new Vector2Int(79, 12), tr);
-            }
-            */
 
             room.dm.spawnDebrisRing(circle, new Vector2Int(10, 10), room);
             room.dm.spawnLitterEnemy(circle.x, circle.y, room);
@@ -63,26 +57,31 @@ public class FirstSwinging : Shot {
             // first hall
             //room.connectRoom(new Vector2Int(45, 82), new Vector2Int(45, 61));
             // long horizontal hall
-            room.connectRoom(new Vector2Int(10, 70), new Vector2Int(80, 70));
+            room.connectRoom(new Vector2Int(10, 71), new Vector2Int(80, 71));
             // 2 downward halls connecting to target rooms
             //room.connectRoom(new Vector2Int(10, 63), new Vector2Int(10, 85));
             //room.connectRoom(new Vector2Int (80, 63), new Vector2Int(80, 85));
             creator.clearCircle(new Vector2Int(15, 80), 18);
             creator.clearCircle(new Vector2Int(75, 80), 18);
+            room.dm.spawnHeal(new Vector2Int(15, 75), room);
+            room.dm.spawnHeal(new Vector2Int(75, 75), room);
 
-            creator.clearRect(new Vector2Int(45, 38), 70, 45);
+            Vector2Int circle = new Vector2Int((int)(Map.S.worldSizeX * 0.5f), (int)(Map.S.worldSizeY * 0.4f));
+            int size = 60;
+            creator.clearCircle(circle, size);
+            creator.fillCircle(circle, size - 12);
+            creator.clearCircle(circle, size - 22);
 
-            TargetRoom tr = room.GetComponent<TargetRoom>();
-            room.dm.spawnHeal(new Vector2Int(15, 75), tr);
-            room.dm.spawnHeal(new Vector2Int(75, 75), tr);
 
-            Vector2Int trashGuySpawn = new Vector2Int((int)(Map.S.worldSizeX * 0.5), (int)(Map.S.worldSizeY * 0.6));
-            room.dm.spawnDebrisRing(trashGuySpawn, new Vector2Int(10, 10), room);
-            room.dm.spawnLitterEnemy(trashGuySpawn.x, trashGuySpawn.y, room);
+
+            room.dm.spawnDebrisRing(circle, new Vector2Int(10, 10), room);
+            room.dm.spawnLitterEnemy(circle.x, circle.y, room);
+            /*
             enemySpawns.Add(new Vector2Int(70, 15));
             enemySpawns.Add(new Vector2Int(70, 10));
             enemySpawns.Add(new Vector2Int(20, 15));
             enemySpawns.Add(new Vector2Int(20, 10));
+            */
         }
         room.wallsAndDoors();
         /*

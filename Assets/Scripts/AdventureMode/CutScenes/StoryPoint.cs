@@ -46,7 +46,6 @@ public class StoryPoint : DungeonObject {
         }
         //dia.pause();
         dia.dumpImage();
-        Debug.Log("getting words");
         for (int i = 0; i < text.Length; i++) {
             Debug.Log(text[i]);
             dia.getWord(text[i]);

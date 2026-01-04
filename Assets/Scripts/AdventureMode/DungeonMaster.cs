@@ -60,7 +60,7 @@ public class DungeonMaster : MonoBehaviour {
         deadRooms = new List<Vector2Int>();
         //deadRooms.Add(new Vector2Int(2,2));
         bossRooms = new List<Vector2Int>();
-        Debug.Log("loading data");
+        //Debug.Log("loading data");
         loadData();
     }
 
@@ -222,14 +222,14 @@ public class DungeonMaster : MonoBehaviour {
                 GM.S.hasSwords[i] = false;
             }
             dunSize = new Vector2Int(3, 3);
-            bossRooms.Add(new Vector2Int(0, 0));
-            bossRooms.Add(new Vector2Int(2, 2));
+            //bossRooms.Add(new Vector2Int(0, 0));
+            bossRooms.Add(new Vector2Int(1, 2));
             noRoomClear = true;
             if (boomBox.S) {
                 boomBox.S.themeMusic(true);
             }
         } else if (progress < 2) {
-            GameInfo.S.songs[0] = 10;
+            GameInfo.S.songs[0] = 7;
             noRoomClear = false;
             dunSize = new Vector2Int(3, 3);
             bossRooms.Clear();

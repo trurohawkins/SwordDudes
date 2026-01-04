@@ -23,7 +23,7 @@ public class DungeonRoom : MonoBehaviour {
     public int doorSpace = 5;
     public Grade grd;
     List<Node> subRooms;
-    List<List<DungeonObject>> waves;
+    public List<List<DungeonObject>> waves;
     List<Form> bloods;
     public bool getPrize;
 
@@ -211,9 +211,16 @@ public class DungeonRoom : MonoBehaviour {
             //wallsAndDoors();
         }
         if (dir == -1) {
-            for (int i = 0; i < 4; i++) {
-                Vector2Int pos = new Vector2Int(Map.S.worldSizeX/2, Map.S.worldSizeY/2) + GM.S.dirs[i*2] * 4;
-			    creator.spawns[i] = new Vector3Int(pos.x, pos.y, 0);
+            if (GameInfo.S.numPlayers == 1) {
+                for (int i = 0; i < 4; i++) {
+                    Vector2Int pos = new Vector2Int(Map.S.worldSizeX/2, Map.S.worldSizeY/2);
+			        creator.spawns[i] = new Vector3Int(pos.x, pos.y, 0);
+                }
+            } else {
+                for (int i = 0; i < 4; i++) {
+                    Vector2Int pos = new Vector2Int(Map.S.worldSizeX/2, Map.S.worldSizeY/2) + GM.S.dirs[i*2] * 4;
+			        creator.spawns[i] = new Vector3Int(pos.x, pos.y, 0);
+                }
             }
         } else {
             setDoorSpace(doorSpace);
@@ -1064,6 +1071,7 @@ public class DungeonRoom : MonoBehaviour {
             creator.paths.Add(savePath[i]);
         }
     }
+
     /*
     public void addDenizen(Form d) {
         denizens.Add(d);
