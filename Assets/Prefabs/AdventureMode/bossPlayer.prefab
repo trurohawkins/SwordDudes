@@ -797,6 +797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: 
+  mainColor: {r: 0.20000002, g: 0.0627451, b: 0.42352945, a: 1}
   walking: 0
   noSwing: 0
   dodgeState: 0
@@ -808,7 +809,8 @@ MonoBehaviour:
   parts: []
   names: []
   actions: []
-  mainColor: {r: 0.20000002, g: 0.0627451, b: 0.42352945, a: 1}
+  stagReduce: 0.3
+  stagValue: 0
   subColor: {r: 0.9811321, g: 0.9706379, b: 0.5322179, a: 1}
   detColor: {r: 0.26415092, g: 0.05357778, b: 0.05357778, a: 1}
   powerColor: {r: 1, g: 0.54901963, b: 0.12941177, a: 1}
@@ -1051,6 +1053,7 @@ MonoBehaviour:
   graphics: {fileID: 0}
   colorNum: 0
   team: -1
+  fodder: 0
   stopped: 0
   blocked: 0
   mDest: {x: 0, y: 0}
@@ -1185,6 +1188,7 @@ MonoBehaviour:
   killTarget: 0
   spawned: 0
   searchForSpot: 0
+  partOfWave: 0
 --- !u!114 &114768063576667892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1260,6 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: 
+  mainColor: {r: 0, g: 0, b: 0, a: 0}
   walking: 0
   noSwing: 0
   dodgeState: 0
@@ -1287,6 +1292,8 @@ MonoBehaviour:
   - Knock
   - Dead
   - Burn
+  stagReduce: 0.12
+  stagValue: 0
 --- !u!212 &212189566493537468
 SpriteRenderer:
   m_ObjectHideFlags: 1

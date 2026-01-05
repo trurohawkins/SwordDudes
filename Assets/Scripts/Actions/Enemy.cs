@@ -70,6 +70,10 @@ public class Enemy : Brain {
         setTeam(6);
     }
 
+    void Start() {
+        setColors(mainColor, subColor);
+    }
+
     public virtual void getTarget() {
         if (pather.target != target) {
             pather.getEnemy(target.gameObject);
@@ -170,7 +174,7 @@ public class Enemy : Brain {
                     anim.setDir(self.direction);
                 }
             }
-            if (def.canMove() && (!attacking || !waitWhileAttack)) {
+            if (def.canMove() && (!attacking || !waitWhileAttack) && speed >= 0) {
                 if (speedCounter >= speed) {
                     if (!def.invulnerable) {
                         if (dest.x >= 0 && Vector2Int.Distance(self.centerPoint, dest) > pather.minDist) {
@@ -327,6 +331,10 @@ public class Enemy : Brain {
         */
     }
 
+    public void setStaggerStats(float threshold, float recover) {
+        def.setStaggerStats(threshold, recover);
+    }
+
     public void longRange(float percent) {
         attackRange = (int)Mathf.Lerp(attRangeRange[0], attRangeRange[1], percent);
         pather.setRange(0, (int)(attackRange * 0.75f), attackRange);//attackRange/2, attackRange);
@@ -434,7 +442,12 @@ public class Enemy : Brain {
         }
     }
 
+    public Color mainColor;
+    public Color subColor;
+
     public void setColors(Color main, Color sub) {
+        mainColor = main;
+        subColor = sub;
         if (anim) {
             PlayerAnimator mine = anim.GetComponent<PlayerAnimator>();
             if (mine) {

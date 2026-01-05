@@ -422,9 +422,12 @@ public class defense : Purpose {
 
 	void setStagger(float s) {//34 26 36
 		curStagger = s;
+		float amnt = 1 - (curStagger / staggerThreshold);
 		if (hpUI) {
-			float amnt = 1 - (curStagger / staggerThreshold);
 			hpUI.setStag(amnt);
+		}
+		if (myGraphics) {
+			myGraphics.setStaggerColor(amnt);
 		}
 	}
 	

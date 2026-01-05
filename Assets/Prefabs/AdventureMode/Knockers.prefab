@@ -506,6 +506,8 @@ MonoBehaviour:
   loseEnemy: -1
   target: {fileID: 0}
   motionSensitive: 0
+  mainColor: {r: 0.54901963, g: 0.14509805, b: 0.7843138, a: 1}
+  subColor: {r: 1, g: 0, b: 0.2509804, a: 1}
 --- !u!114 &114065871438628694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -719,6 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: 
+  mainColor: {r: 0.5505684, g: 0.14404595, b: 0.7830189, a: 1}
   walking: 0
   noSwing: 0
   dodgeState: 0
@@ -730,7 +733,8 @@ MonoBehaviour:
   parts: []
   names: []
   actions: []
-  mainColor: {r: 0.5505684, g: 0.14404595, b: 0.7830189, a: 1}
+  stagReduce: 0.2
+  stagValue: 0
   subColor: {r: 1, g: 0, b: 0.24949217, a: 1}
   detColor: {r: 0, g: 0, b: 0, a: 1}
   powerColor: {r: 0.13205785, g: 0.082235664, b: 0.2264151, a: 1}

@@ -96,13 +96,6 @@ public class Cell : MonoBehaviour {
 	}
 
 	public bool formLeave(Form f){
-		//Debug.Log (within.Count);
-		//Debug.Log("leaving");
-		if (x == 44 && y == 65 && f.id == 1) {
-			for (int i = 0; i < within.Count; i++) {
-				Debug.Log("within: " + within[i].name);
-			}
-		}
 		if (within.Remove (f)) {
 			//Debug.Log (within.Count);
 			Color col = Color.white;

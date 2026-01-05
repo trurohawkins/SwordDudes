@@ -6,7 +6,8 @@ public class FighterAnimator : MonoBehaviour {
 
     public string character;
     protected string curAction;
-
+    public Color mainColor;
+	Color staggerColor;
     public bool walking;
     public bool noSwing;
     public int dodgeState = 0;
@@ -47,6 +48,24 @@ public class FighterAnimator : MonoBehaviour {
 
     public virtual void setColors(SwordSoul mySoul, int pNum) { }
     
+    public float stagReduce = 0.3f;
+
+
+	public virtual void setMainColor(Color main) {
+		mainColor = main;
+		staggerColor = new Color(main.r - stagReduce, main.g - stagReduce, main.b - stagReduce);
+	}
+
+    public float stagValue = 0;
+
+    public Color getMainColor() {
+        return Color.Lerp(mainColor, staggerColor, stagValue);
+    }
+
+    public virtual void setStaggerColor(float val) {
+        stagValue = val;
+    }
+
     public virtual void spawn() { }
 
     //0-alive 1-normaldeath 2-burndeath

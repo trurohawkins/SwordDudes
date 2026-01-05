@@ -47,7 +47,6 @@ public class Storybo : MonoBehaviour {
     GameObject nextShot = null;
 
     public void finishShot(int dir, int progress) {
-        Debug.Log("finishing shot " + progress);
         if (curShot) {
             Debug.Log(curShot.name);
             Shot shot = curShot.GetComponent<Shot>();

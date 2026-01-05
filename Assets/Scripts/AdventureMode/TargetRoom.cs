@@ -415,7 +415,7 @@ public class TargetRoom : DungeonRoom {
         }
     }
 
-    DungeonObject spawnMonster(Vector2Int pos, int type) {
+    public DungeonObject spawnMonster(Vector2Int pos, int type) {
         DungeonObject dun = null;
         int points = 0;
         if (type == 0) {

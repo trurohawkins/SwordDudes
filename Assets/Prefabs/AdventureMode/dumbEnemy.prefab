@@ -524,6 +524,7 @@ MonoBehaviour:
   killTarget: 1
   spawned: 0
   searchForSpot: 1
+  partOfWave: 0
 --- !u!114 &114253164438952700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -705,6 +706,8 @@ MonoBehaviour:
   loseEnemy: 5
   target: {fileID: 0}
   motionSensitive: 0
+  mainColor: {r: 0.8018868, g: 0, b: 0, a: 1}
+  subColor: {r: 0.9074985, g: 0.8066038, b: 1, a: 1}
 --- !u!114 &114587423857588912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -717,6 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: 
+  mainColor: {r: 0.6981132, g: 0.016618116, b: 0.009878943, a: 1}
   walking: 0
   noSwing: 0
   dodgeState: 0
@@ -728,7 +732,8 @@ MonoBehaviour:
   parts: []
   names: []
   actions: []
-  mainColor: {r: 0.6981132, g: 0.016618116, b: 0.009878943, a: 1}
+  stagReduce: 0.2
+  stagValue: 0
   subColor: {r: 0.7682335, g: 0.629984, b: 0.9339623, a: 1}
   detColor: {r: 0, g: 0, b: 0, a: 1}
   powerColor: {r: 0.13205785, g: 0.082235664, b: 0.2264151, a: 1}

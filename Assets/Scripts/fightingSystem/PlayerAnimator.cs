@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimator : FighterAnimator {
-	public Color mainColor;
 	public Color subColor;
 	public Color detColor;
 	public Color powerColor;
@@ -106,11 +105,7 @@ public class PlayerAnimator : FighterAnimator {
 
 	public override void setColors(SwordSoul mySoul, int pNum) {
 		//Debug.Log("player " + pNum + " setting colors for soul: " + mySoul.description);
-		mainColor = mySoul.mainColor [pNum];
-		//Debug.Log(mainNum);
-		for (int i = 0; i < mainNum; i++) {
-			mainSprites [i].color = mainColor;
-		}
+		setMainColor(mySoul.mainColor[pNum]);
 		subColor = mySoul.subColor [pNum];
 		for (int i = 0; i < subNum; i++) {
 			subSprites [i].color = subColor;;
@@ -126,10 +121,7 @@ public class PlayerAnimator : FighterAnimator {
 	}
 
 	public void setColors(Color main, Color sub, Color det, Color pow) {
-		mainColor = main;
-		for (int i = 0; i < mainNum; i++) {
-			mainSprites [i].color = mainColor;
-		}
+		setMainColor(main);
 		subColor = sub;
 		for (int i = 0; i < subNum; i++) {
 			subSprites [i].color = subColor;;
@@ -144,7 +136,23 @@ public class PlayerAnimator : FighterAnimator {
 		}
 	}
 
-	public void giveColors(PlayerAnimator pa) {
+    public override void setMainColor(Color main) {
+        base.setMainColor(main);
+		for (int i = 0; i < mainNum; i++) {
+			mainSprites [i].color = mainColor;
+		}
+    }
+
+    public override void setStaggerColor(float val) {
+        base.setStaggerColor(val);
+		if (mainSprites != null) {
+			for (int i = 0; i < mainNum; i++) {
+				mainSprites [i].color = getMainColor();
+			}
+		}
+    }
+
+    public void giveColors(PlayerAnimator pa) {
 		pa.setColors(mainColor, subColor, detColor, powerColor);
 	}
 

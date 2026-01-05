@@ -26,9 +26,14 @@ public class PotAnim : FighterAnimator {
 
     public override void setColors(SwordSoul mySoul, int colorNum) {
         cNum = colorNum;//GameInfo.S.colors[pNum];
-        sr[0].color = sr[2].color = mySoul.mainColor[cNum];
+        setMainColor(mySoul.mainColor[cNum]);
         sr[1].color = mySoul.subColor[cNum];
         soul = mySoul;
+    }
+
+    public override void setMainColor(Color main) {
+        base.setMainColor(main);
+        sr[0].color = sr[2].color = mainColor;
     }
 
     public override void lerpHeat(float fade) {
@@ -163,7 +168,7 @@ public class PotAnim : FighterAnimator {
                     sr[0].color = dodgeColor;//soul.powerColor[cNum];
                     sr[1].color = dodgeColor;//soul.powerColor[cNum];
                 } else {
-                    sr[0].color = soul.mainColor[cNum];
+                    sr[0].color = getMainColor();
                     sr[1].color = soul.subColor[cNum];
                 }
             }
@@ -177,6 +182,13 @@ public class PotAnim : FighterAnimator {
             }
             setState();
             dodgeState = state;
+        }
+    }
+
+    public override void setStaggerColor(float val) {
+        stagValue = val;
+        if (sr != null) {
+            sr[0].color = getMainColor();
         }
     }
 

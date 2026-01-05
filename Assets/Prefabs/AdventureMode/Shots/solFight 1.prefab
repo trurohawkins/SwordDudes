@@ -9,67 +9,72 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1745050733238224}
+  m_RootGameObject: {fileID: 1591101386661756}
   m_IsPrefabParent: 1
---- !u!1 &1745050733238224
+--- !u!1 &1591101386661756
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4796211764330600}
-  - component: {fileID: 114544829273159400}
+  - component: {fileID: 4709290738711844}
+  - component: {fileID: 114228282886262376}
   m_Layer: 0
-  m_Name: LearnStagger
+  m_Name: solFight 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4796211764330600
+--- !u!4 &4709290738711844
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1745050733238224}
+  m_GameObject: {fileID: 1591101386661756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.7314692, y: 50.941456, z: 20.729916}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114544829273159400
+--- !u!114 &114228282886262376
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1745050733238224}
+  m_GameObject: {fileID: 1591101386661756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cf4f1885ceb5f543a4b309687401903, type: 3}
+  m_Script: {fileID: 11500000, guid: eff97d837a3b9c24dbe095730ff0913b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 0
+  room: 1
   pause: 1
   speaker: 0
   doorSpace: 5
   leadUp: 0
   image: {fileID: 0}
   text:
-  - STAGGER ROOM
+  - Hey whered you go? I cant see a thing!!!
   analog: []
   key: []
   waveText: []
-  afterText: []
-  afterImage: {fileID: 0}
+  afterText:
+  - '...'
+  - Its good to be with you again
+  - Be careful with my power it can burn you!
+  afterImage: {fileID: 21300000, guid: 14e844b46abf0984f9768bee0f4bf0c7, type: 3}
   pre: {fileID: 0}
   next: []
-  storyPoint:
-  - {fileID: 1797758450355208, guid: 7ed04cd3b61162848b964837ef6bf897, type: 2}
+  storyPoint: []
   myRoom: {fileID: 0}
   read: 0
   narrator: {fileID: 0}
-  roomType: 1
+  roomType: 0
   randomRoom: 0
+  boss: 7
+  level: 1
+  speakerChange: 2
