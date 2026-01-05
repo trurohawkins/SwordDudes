@@ -62,6 +62,7 @@ public class DungeonMaster : MonoBehaviour {
         bossRooms = new List<Vector2Int>();
         //Debug.Log("loading data");
         loadData();
+        storybo.setBoard(progress);
     }
 
     public bool noRoomClear = false;
@@ -246,7 +247,6 @@ public class DungeonMaster : MonoBehaviour {
                 boomBox.S.startSwordSongs(false);
             }
         }
-        storybo.setBoard(progress);
     }
 
     public Vector2Int getDir(int d) {

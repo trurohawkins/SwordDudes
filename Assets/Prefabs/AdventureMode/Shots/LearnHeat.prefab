@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: 0
+  bossShot: 0
   pause: 1
   speaker: 0
   doorSpace: 15
@@ -70,7 +71,8 @@ MonoBehaviour:
   afterText: []
   afterImage: {fileID: 0}
   pre: {fileID: 0}
-  next: []
+  next:
+  - {fileID: 1422651649897836, guid: 3229ff5579a82f84e957a3e1cea83c3c, type: 2}
   storyPoint:
   - {fileID: 1265786773966300, guid: 9f915861f2a55d0448ff87b02c7138a9, type: 2}
   myRoom: {fileID: 0}

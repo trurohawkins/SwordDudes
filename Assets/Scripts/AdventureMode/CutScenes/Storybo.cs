@@ -43,33 +43,39 @@ public class Storybo : MonoBehaviour {
     public void startWriting() {
         dia.startWriting();
     }
+    // so we can sewt it at the beginning
+    GameObject nextShot = null;
 
     public void finishShot(int dir, int progress) {
-        //Debug.Log("finishing shot " + progress);
-        GameObject nextShot = null;//curShot.nextShot();
+        Debug.Log("finishing shot " + progress);
         if (curShot) {
             Debug.Log(curShot.name);
-        }
-        if (curShot) {
-            nextShot = curShot.nextShot(dir);
+            Shot shot = curShot.GetComponent<Shot>();
+            if (shot.roomType == 0) {
+                if (curBoard < board.Length) {
+                    curBoard++;
+                    nextShot = board[curBoard];
+                } else {
+                    nextShot = null;
+                }
+            } else {
+                nextShot = curShot.nextShot(dir);
+            }
             Debug.Log(curShot.name + " ggetting next shot:" + nextShot);
             //Destroy(curShot.gameObject);
         }
-        if (!nextShot) {
-            if (curBoard < board.Length) {
-                nextShot = board[curBoard];
-                curBoard++;
-            }
-        }
+
         if (nextShot) {
             spawnShot(nextShot);
         } else {
             curShot = null;
         }
+        nextShot = null;//curShot.nextShot();
     }
 
-    public void setBoard(int board) {
-        curBoard = board;
+    public void setBoard(int b) {
+        curBoard = b;
+        nextShot = board[curBoard];
     }
 
     public int curBoss = 0;

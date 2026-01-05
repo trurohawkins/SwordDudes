@@ -901,9 +901,6 @@ public class Form : MonoBehaviour {
 		for (int i = 0; i < body.Length; i++) {
 			int x = body [i].x + centerPoint.x;
 			int y = body [i].y + centerPoint.y;
-			if (id == 1) {
-				Debug.Log(x + ", " + y);
-			}
 			if (x > -1 && x < Map.S.worldSizeX && y > -1 && y < Map.S.worldSizeY) {
 				Map.S.world[x,y].formLeave(this);
 			}

@@ -44,7 +44,7 @@ public class Cell : MonoBehaviour {
 				Debug.LogWarning("player entering");
 			}
 		if (within.Contains(f) && f.id == 1) {
-			Debug.Log(name + " already contains " + f.name);
+			//Debug.Log(name + " already contains " + f.name);
 			return;
 		}
 		if (within.Count > 0) {
