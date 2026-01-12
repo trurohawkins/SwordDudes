@@ -94,9 +94,15 @@ public class LargeMass : DungeonObject {
 		}
     }
 
-    bool checkAndAdd(int x, int y) {
+    public bool checkAndAdd(int x, int y) {
         Cell c = Map.S.world[x, y];
-        if (!c.within.Contains(self) && !body.Contains(new Vector2Int(x, y)) && c.getTiler() == null && !c.checkID(-1)) {
+        Tiler t = c.getTiler();
+        if (t) {
+            if (tile.priority < t.priority) {
+                return false;
+            }
+        }
+        if (!c.within.Contains(self) && !body.Contains(new Vector2Int(x, y)) && !c.checkID(-1)) {
             if (master && !master.readyToGo) {
                 addBody(new Vector2Int(x, y));
             } else {
@@ -149,7 +155,7 @@ public class LargeMass : DungeonObject {
 
     public void removeBody(int x, int y) {
         if(!Map.S.world[x,y].formLeave(self)) {
-            Debug.Log(name + " wasnt in " + x + ", " + y);
+            //Debug.Log(name + " wasnt in " + x + ", " + y);
         }
         body.Remove(new Vector2Int(x, y));
     }
@@ -157,11 +163,13 @@ public class LargeMass : DungeonObject {
 
     public void spawnBody(Vector2Int p, bool check) {
         Cell c = Map.S.world[p.x, p.y];
+        //Debug.Log("within: " + c.within.Count + " height
         if (!check || c.canEnter(self)) {//height < self.height) {
             c.formEnter(self);
             addBody(p);
         }
     }
+
 
     public override void receiveMaster(DungeonRoom n_master) {
         base.receiveMaster(n_master);

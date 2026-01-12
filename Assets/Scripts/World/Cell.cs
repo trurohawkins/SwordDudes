@@ -171,7 +171,7 @@ public class Cell : MonoBehaviour {
 	}
 	
 	public void setToFormColor(Form f) {
-		if (!f.invisible && ((!f.skin && !f.GetComponent<TileSet>() && !f.GetComponent<Tiler>()) || !GM.S.drawSprites || f.debugDraw)) {//if (!f.skin || ((GM.S.drawPlayerSprites && (f.id != 1 && f.id != 2)) || !GM.S.drawPlayerSprites)) {
+		if (!f.invisible && (!(f.skin || f.GetComponent<TileSet>() || f.GetComponent<Tiler>()) || !GM.S.drawSprites || f.debugDraw)) {//if (!f.skin || ((GM.S.drawPlayerSprites && (f.id != 1 && f.id != 2)) || !GM.S.drawPlayerSprites)) {
 			bottomFloor.enabled = true;
 			bottomFloor.sprite = square;
 			bottomFloor.transform.localScale = new Vector3 (1f, 1f, 1f);

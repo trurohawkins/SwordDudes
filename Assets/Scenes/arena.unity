@@ -1565,17 +1565,17 @@ Prefab:
     - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
         type: 2}
       propertyPath: controls.Array.data[1]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
-        type: 2}
-      propertyPath: controls.Array.data[0]
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
         type: 2}
+      propertyPath: controls.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
+        type: 2}
       propertyPath: songs.Array.data[0]
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
         type: 2}
@@ -1585,7 +1585,7 @@ Prefab:
     - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
         type: 2}
       propertyPath: colors.Array.data[0]
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
         type: 2}

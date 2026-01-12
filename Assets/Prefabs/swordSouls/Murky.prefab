@@ -110,7 +110,7 @@ MonoBehaviour:
   self: {fileID: 0}
   range: 8
   speedCounter: 0
-  speed: 5
+  speed: 6
   active: 1
   soulName: Shade
   lerpSwordColor: 1
@@ -154,9 +154,10 @@ MonoBehaviour:
     type: 2}
   soulStats: {fileID: 1134512226035998, guid: f5a4bdac941938a47a5d1450cb257b64, type: 2}
   fx: {fileID: 1214235195810502, guid: b56175cc5f9b55641af112dbe6f66493, type: 2}
-  dodgeParticle: {fileID: 0}
-  SwordAnim: {fileID: 0}
-  hitEffect: {fileID: 0}
+  dodgeParticle: {fileID: 1649030013574862, guid: 398aa62c5aa16c64f9fad299f91b8581,
+    type: 2}
+  SwordAnim: {fileID: 1300347195633114, guid: 3a205412750f9e84a9ee51faa83d224b, type: 2}
+  hitEffect: {fileID: 1766578580420552, guid: 4fd4e7312e8cdfe4ca1a24cf6165335e, type: 2}
   attackWidth: 1
   attackLength: 1
   attackSpacing: -1
@@ -164,25 +165,25 @@ MonoBehaviour:
   attackMultiSpacing: 0
   attackTaper: 0
   attackDist: -1
-  maxStrikes: 720
+  maxStrikes: 600
   damage: {x: 5, y: 7}
-  staggerDamage: {x: 100, y: 200}
+  staggerDamage: {x: 20, y: 30}
   staggerTime: 100
-  knockBackDamage: {x: 5, y: 40}
-  mass: {x: 0, y: 0}
-  swordWeight: 0
-  swordAccel: 0.05
+  knockBackDamage: {x: 10, y: 60}
+  mass: {x: 0, y: 45}
+  swordWeight: 30
+  swordAccel: 0.005
   speedBoost: 1
   slowDown: 0
-  dodgeSpeed: 5
-  dodgeLength: 10
-  dodgeRecover: 10
-  dodgeStart: 2
-  dodgeWindow: 0.3
-  attackSpeed: {x: 1, y: 7}
+  dodgeSpeed: 3
+  dodgeLength: 20
+  dodgeRecover: 20
+  dodgeStart: 7
+  dodgeWindow: 0.5
+  attackSpeed: {x: 3, y: 10}
   chargedSpeed: {x: 5, y: 8}
-  slowSpeeds: {x: 0, y: 0}
-  fastSpeeds: {x: 0, y: 0}
+  slowSpeeds: {x: 0.5, y: 0.3}
+  fastSpeeds: {x: 2, y: 1.2}
   bracePower: 2
   swingAmount: 35
   receiveHeat: 1
@@ -198,22 +199,28 @@ MonoBehaviour:
   burning: 0
   heatSpeed: 0.6
   chargeSpeed: 0.05
+  bodyHeatMod: 1
+  swingHitHeat: 5
   fullPower: 1
   stats:
   - knockBack
   multis:
   - 2
-  burnDefenses: {x: 0, y: 0, z: 0}
+  burnDefenses: {x: 1, y: 1, z: 1}
   description: Spreads darkness that confiens and hurts your opponents
+  swingPause: 25
   swordAlpha: 1
-  gearHeatMod: 0
-  baseRange: 1
-  flareRange: 0
   curGear: 1
-  shadeDamage: 0.05
+  gearHeatMod: 2
+  gearCoolMod: 2
+  baseRange: 2
+  flareRange: 2
+  chunkAnimation: 0
+  shadeDamage: 0.02
   piece: {fileID: 1119165162126848, guid: 8461a28940d7b6a4fb2447333802d7e4, type: 2}
+  shadeWall: {fileID: 1531795839135872, guid: 0d8b7677022fc714f81b39be10335f79, type: 2}
   shadeAlpha: 0.5
-  shadeTime: 300
+  shadeTime: 600
 --- !u!114 &114730822198949034
 MonoBehaviour:
   m_ObjectHideFlags: 1

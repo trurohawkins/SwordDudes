@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tiler : MonoBehaviour {
 	public int id = -1;
+	public int priority = -1;
     public GameObject[] tiles;
     public Tile[] set;
 	public bool cornerPriority;
