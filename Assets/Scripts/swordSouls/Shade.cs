@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shade : SwordSoul {
 
 	public float shadeDamage;
+	public float shadeBodyDamage;
 	public GameObject piece;
 	public GameObject shadeWall;
 
@@ -13,6 +14,7 @@ public class Shade : SwordSoul {
 	int sRange;
 	//List<int> miasma;
 	LargeMass miasma;
+	Tiler mTiles;
 	List<int> miasmaTimers;
 	Form shadeForm;
 
@@ -23,8 +25,14 @@ public class Shade : SwordSoul {
 				Vector2Int spawnPos = myBlade [0] [i].centerPoint;
 				//Vector2Int spawnPos = new Vector2Int (sp.x + ((int)Mathf.Sign (tipDir.x) * 2), sp.y + ((int)Mathf.Sign (tipDir.y) * 2));
 				Cell check = Map.S.world [spawnPos.x, spawnPos.y];
+				Tiler t = check.getTiler();
+				if (t) {
+					if (mTiles.priority < t.priority) {
+						continue;
+					}
+				}
 				//if (check.within.Count == 0 || (check.within.Count == 1 && check.within[0].parent == wielder)) {
-				if (/*check.getTile() == null && */!check.checkID(1) && !check.within.Contains (shadeForm)) {
+				if (!check.checkID(1) && !check.within.Contains (shadeForm)) {
 					if (life.takeDamage (shadeDamage, false)) {
 						/*
 						Map.S.world [spawnPos.x, spawnPos.y].formEnter (shadeForm);
@@ -34,11 +42,10 @@ public class Shade : SwordSoul {
 						miasma.Add (spawnPos.y);
 						miasma.Add (shadeTime);
 						*/
-						if (miasma.checkAndAdd(spawnPos.x, spawnPos.y)) {
-							miasmaTimers.Add (spawnPos.x);
-							miasmaTimers.Add (spawnPos.y);
-							miasmaTimers.Add(shadeTime);
-						}
+						miasma.spawnBody(spawnPos, false);
+						miasmaTimers.Add (spawnPos.x);
+						miasmaTimers.Add (spawnPos.y);
+						miasmaTimers.Add(shadeTime);
 					} else {
 						break;
 					}
@@ -114,6 +121,7 @@ public class Shade : SwordSoul {
 		ts.tileColor.a = shadeAlpha;
 		*/
 		GameObject murk = Instantiate(shadeWall);
+		mTiles = murk.GetComponent<Tiler>();
 		shadeForm = murk.GetComponent<Form>();
 		shadeForm.parent = wielder;
 		ShadeBlock block = murk.GetComponent<ShadeBlock>();
@@ -125,7 +133,7 @@ public class Shade : SwordSoul {
 		attackChunk ac = murk.GetComponent<attackChunk>();
 		ac.setAttack(will);
 		Tiler tile = murk.GetComponent<Tiler>();
-		tile.color =soulColorA;
+		tile.color = soulColorA;
 		tile.color.a = shadeAlpha;
 		miasma = murk.GetComponent<LargeMass>();
 		if (!GM.S.curDM) {
@@ -144,10 +152,10 @@ public class Shade : SwordSoul {
 			}
 			life.takeStagger(v.getValue ("stagger"), v.getValue ("stagTime"));
 		*/
-		float oldWeight = life.weight;
-		life.weight = -1;
-		life.callAction(col, 0, x, y);//takeDamage (shadeDamage, false);
-		life.weight = oldWeight;
+		//float oldWeight = life.weight;
+		//life.weight = -1;
+		life.takeDamage(shadeBodyDamage, false);//callAction(col, 0, x, y);
+		//life.weight = oldWeight;
 		//}
 	}
 

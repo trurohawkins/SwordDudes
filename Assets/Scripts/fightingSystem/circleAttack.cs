@@ -1512,7 +1512,7 @@ public class circleAttack : Purpose {
 				// perhaps there is a better solution, but when two attacks hit eachother 
 				// the other group gets destroyed before this loop is over
 				if (hitList [k]) {
-					//Debug.Log (hitList [k].name);
+					Debug.Log (hitList [k].name);
 					//defense d = hitList [k].gameObject.GetComponent<defense> ();
 					Value v = hitList [k].gameObject.GetComponent<Value> ();
 					Knockable kn = hitList [k].gameObject.GetComponent<Knockable> ();
@@ -1521,8 +1521,9 @@ public class circleAttack : Purpose {
 						SwordDummy sd = null;
 						circleAttack ca = null;
 						float otherPower = v.getValue ("knockBack");
-						if (otherPlayer) {
-							//Debug.Log ("we got another player");
+						// 4 is Shade block id, or perhaps anything created by a sword that we dont want their player to collide with(via player parented over the creation)
+						if (otherPlayer && hitList[k].id != 4) {
+							Debug.Log ("we got another player " + otherPlayer.name);
 							Player op = otherPlayer.GetComponent<Player>();
 							if (op) {
 								ca = op.myAttack;
@@ -1534,12 +1535,15 @@ public class circleAttack : Purpose {
 						if (ca) {
 							otherPower = ca.calcStat(ca.getMass());
 						}
+						
 						float ourPower = calcStat(getMass());
 						//heat exchange
 						if (ca) {
 							soul.hitSword(ca);
 						}
+						Debug.Log("other's power: " + otherPower);
 						if (otherPower != -1 && otherPower < ourPower) {
+							Debug.Log(name + " we beat them ");
 							if (sd) {
 								sd.getHit(ourPower);
 							}

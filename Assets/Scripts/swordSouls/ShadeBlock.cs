@@ -25,7 +25,7 @@ public class ShadeBlock : Purpose {
                 }
             }
             if (!teamHit) {
-                //spirit.shadeBodyHit(poo, x, y);
+                spirit.shadeBodyHit(poo, x, y);
                 Map.S.world[x,y].formLeave(self);
             }
         }

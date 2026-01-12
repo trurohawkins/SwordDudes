@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  priority: 10
   tiles:
   - {fileID: 1534780991893884, guid: 2182a1c16658f4b4391119d6c187445f, type: 2}
   - {fileID: 1992213701697392, guid: 7f51726c8cb531845ae564e619c511cd, type: 2}
@@ -98,6 +99,7 @@ MonoBehaviour:
   staggerThreshold: -1
   recoverySpeed: 0
   weight: -1
+  bodyHeat: 5
   backStabDefense: 0
   dodging: 0
   poises: []
@@ -116,6 +118,9 @@ MonoBehaviour:
   swordStuck: 0
   staggerVul: 1
   invulTime: 41
+  flickTime: 31
+  baseFlickSpeed: 10
+  flickDecrement: 2
   curCorpse: {fileID: 0}
   power: 0
   healthIcon: {fileID: 0}
@@ -127,6 +132,8 @@ MonoBehaviour:
   clearSpace: 0
   killTarget: 0
   spawned: 0
+  searchForSpot: 0
+  partOfWave: 0
   spreadChance: 1
   body: []
   done: {fileID: 1318940380712018, guid: 08a7fe1da7ffce149a128556c84c4978, type: 2}
@@ -143,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  debugDraw: 0
   color: {r: 0, g: 0, b: 0, a: 1}
   spawned: 0
   parent: {fileID: 0}
@@ -152,6 +160,7 @@ MonoBehaviour:
   unImportant: 0
   active: 1
   alive: 0
+  gaseous: 0
   etheral: 0
   hidden: 0
   removeOnCol: 0

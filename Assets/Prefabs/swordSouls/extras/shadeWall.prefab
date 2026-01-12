@@ -60,19 +60,24 @@ MonoBehaviour:
   - damage
   - stagger
   - stagTime
+  - knockBack
   minValues:
   - 5
   - 20
   - 100
+  - 0
   maxValues:
   - 5
   - 20
   - 100
+  - 0
   values:
   - 5
   - 20
   - 100
+  - 0
   multi:
+  - 1
   - 1
   - 1
   - 1
@@ -144,7 +149,7 @@ MonoBehaviour:
   centerPoint: {x: 0, y: 0}
   body: []
   direction: 2
-  height: 16
+  height: 11
   width: 2
   length: 2
   sprites: []

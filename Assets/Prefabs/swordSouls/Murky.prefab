@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self: {fileID: 0}
-  range: 8
+  range: 5
   speedCounter: 0
   speed: 6
   active: 1
@@ -173,7 +173,7 @@ MonoBehaviour:
   mass: {x: 0, y: 45}
   swordWeight: 30
   swordAccel: 0.005
-  speedBoost: 1
+  speedBoost: 0
   slowDown: 0
   dodgeSpeed: 3
   dodgeLength: 20
@@ -188,14 +188,14 @@ MonoBehaviour:
   swingAmount: 35
   receiveHeat: 1
   burnExemptParticles: 0
-  burningPoint: 63
+  burningPoint: 100
   freezingPoint: 0
   climate: 50
   energy: 0
   baseEnergy: 50
-  burst: 3
+  burst: 7
   bursting: 0
-  maxHeat: 110
+  maxHeat: 150
   burning: 0
   heatSpeed: 0.6
   chargeSpeed: 0.05
@@ -216,7 +216,8 @@ MonoBehaviour:
   baseRange: 2
   flareRange: 2
   chunkAnimation: 0
-  shadeDamage: 0.02
+  shadeDamage: 0.05
+  shadeBodyDamage: 0
   piece: {fileID: 1119165162126848, guid: 8461a28940d7b6a4fb2447333802d7e4, type: 2}
   shadeWall: {fileID: 1531795839135872, guid: 0d8b7677022fc714f81b39be10335f79, type: 2}
   shadeAlpha: 0.5
