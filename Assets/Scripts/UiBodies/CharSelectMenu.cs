@@ -122,9 +122,14 @@ public class CharSelectMenu : UIMenu {
             selectButton s = buts[selects[player].x, selects[player].y].GetComponent<selectButton>();
             if (s) {
                 if (!s.locked()) {
-                    s.choose(playerNums[player]);
-                    s.selectChar(playerNums[player]);
-                    bringUpOption(playerNums[player], player, new Vector3(0,0,0));
+                    if (playerNums[player] >= 0) {
+                        s.choose(playerNums[player]);
+                        Debug.Log(playerNums[player]);
+                        s.selectChar(playerNums[player]);
+                        bringUpOption(playerNums[player], player, new Vector3(0,0,0));
+                    } else {
+                        Debug.Log("removed character press play");
+                    }
                 }
             } else {
                 icon i = buts[selects[player].x, selects[player].y];
@@ -206,7 +211,7 @@ public class CharSelectMenu : UIMenu {
     }
 
     public override void pressBack(int player) {
-        Debug.Log(player + " is pressing back " + playerNums[player]);
+        //Debug.Log(player + " is pressing back " + playerNums[player]);
         //if (MainMenu.S.checkActiveControlScheme(player)) {
         if (MainMenu.S.getScreenOfController(player)) {
             if (blocked[player]) {

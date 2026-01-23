@@ -74,6 +74,7 @@ public class UIMenu : MonoBehaviour {
 			selects[i] = new Vector2Int(0,0);//-1;
 			moves[i] = new Vector2(0,0);
 			blocked[i] = false;
+			backCount[i] = -1;
 		}
 	}
 
@@ -132,6 +133,7 @@ public class UIMenu : MonoBehaviour {
 					if (boomBox.S) {
 						boomBox.S.yesPress (controlNum);
 					}
+					Debug.Log(name + " but tclick");
 					buttClick(i);
 				}
 			}
@@ -147,7 +149,7 @@ public class UIMenu : MonoBehaviour {
 				} else {
 					backCount[i] = 0;
 				}
-			} else if (backCount[i] != 0) {
+			} else {//if (backCount[i] != 0) { //not sure why I would check, -1 is the state ready for back press, and it seems we should always reset
 				backCount[i] = -1;
 			}
 		}

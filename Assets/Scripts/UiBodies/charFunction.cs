@@ -238,7 +238,6 @@ public class charFunction : MonoBehaviour {
 	}
 
 	public void removeSelf() {
-		//Debug.Log("removing self " + pNum);
 		unChoose();
 		Destroy (playerText);
 		Destroy (controlButton);

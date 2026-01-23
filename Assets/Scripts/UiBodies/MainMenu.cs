@@ -280,7 +280,7 @@ public class MainMenu : MonoBehaviour {
 			}
 			StartCoroutine(actuallyPlay());
 		} else {
-			Debug.Log("max: " + maxPlayers + " " + totalPlayers);
+			//Debug.Log("max: " + maxPlayers + " " + totalPlayers);
 			charSelect.SetActive (true);
 			//only run if we are not on our first char scren
 			// or if we were previously on the different screen mode

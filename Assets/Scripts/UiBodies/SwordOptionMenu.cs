@@ -142,6 +142,7 @@ public class SwordOptionMenu : UIMenu {
 	}
 
     public override void pressBack(int player) {
+        Debug.Log("back o nsword option");
         Accept();
     }
 
