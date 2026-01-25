@@ -377,7 +377,19 @@ public class MainMenu : MonoBehaviour {
 		Debug.Log("new player " + controlType + " " + controlNum);
 		int num = numActivePlayers;
 		if (num < totalPlayers) {
-			charMenu.setBlocked(scheme, false);
+			if (charMenu) {
+				charMenu.setBlocked(scheme, false);
+				charFunction screen = addCharacterScreen();
+				screen.type = controlType;
+				screen.num = controlNum;
+				screen.scheme = scheme;
+				charMenu.setPlayer(scheme, num);
+			} else {
+				// specifically for skippign char screen for saga atm
+				GameInfo.S.controlNums[GameInfo.S.numPlayers] = controlNum;
+				GameInfo.S.controls[GameInfo.S.numPlayers] = controlType;
+				GameInfo.S.numPlayers++;
+			}
 			//bool gotHuman = checkHumanPlayer(scheme, controlType, controlNum);
 			/*
 			if (!gotHuman) {
@@ -388,14 +400,7 @@ public class MainMenu : MonoBehaviour {
 				GameInfo.S.controlNums[num] = -1;
 			}
 			*/
-			
-			charFunction screen = addCharacterScreen();
-			screen.type = controlType;
-			screen.num = controlNum;
-			screen.scheme = scheme;
-			if (charMenu) {
-				charMenu.setPlayer(scheme, num);
-			}
+
 			/*
 			controllerText[num].text = controlTypes[controlType];
 			if (characterScreens[num]) {

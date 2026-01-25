@@ -54,7 +54,7 @@ public class Cell : MonoBehaviour {
 
 			for (int i = 0; i < within.Count; i++) {
 				if (swordEntering && within [i].id == 1) {
-					Debug.LogError (within[i].name + " possible error! trying to add " + f.name + "at " + gameObject.transform.position);
+					//Debug.LogError (within[i].name + " possible error! trying to add " + f.name + "at " + gameObject.transform.position);
 				}
 				if (swordEntering && within [i].id == -1) {
 					//Debug.LogError (within [i].name + " possible error! trying to add " + f.name + "at " + gameObject.transform.position);

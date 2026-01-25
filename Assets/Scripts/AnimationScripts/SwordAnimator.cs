@@ -133,7 +133,6 @@ public class SwordAnimator : MonoBehaviour {
 	}
 
 	public virtual void setColor(Color c, int sprite) {
-		//Debug.Log(name + "setting color " + c + " on " + sprite);
 		if (!will || !will.isHidden()) {
 			if (sr != null && sprite < sr.Length) {
 				sr[sprite].color = c;

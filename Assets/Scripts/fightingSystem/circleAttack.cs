@@ -96,6 +96,7 @@ public class circleAttack : Purpose {
 
 	public void meetBody(Form f) {
 		body = f;
+		//Debug.Log("me tbody " +  name);
 		soul = gameObject.GetComponent<SwordSoul> ();
 		soul.meetBody (f.gameObject);
 		swingPause = soul.swingPause;
@@ -231,7 +232,7 @@ public class circleAttack : Purpose {
 				//	f.transform.GetChild (0).localScale = new Vector3 ((float)(f.width) / 2, (float)(f.length) / 2, 1);
 					//sr = 
 					f.transform.GetChild (0).GetChild (0).GetChild (1).GetComponent<SpriteRenderer> ().color = soul.soulColorB;
-					f.transform.GetChild (0).GetChild (0).transform.localScale = new Vector3 (f.width * 13f, f.length * 13f, 1);
+					f.transform.GetChild (0).GetChild (0).transform.localScale = new Vector3 (f.width * 7.69f, f.length * 7.69f, 1);
 					if (f.width % 2 == 0) {
 						f.transform.GetChild (0).GetChild (0).position = f.transform.position + new Vector3 (-0.5f, -0.5f, 0f);
 					} else {
@@ -319,7 +320,6 @@ public class circleAttack : Purpose {
 		}
 		//Debug.Log(Mathf.Cos ((pos + (widIt * taper)) * Mathf.PI / 180));
 		Vector2Int center = getCenter ();
-
 		int xp = (int)Mathf.Round(center.x + (length + swordDist) * Mathf.Cos ((pos + (widIt * taper)) * Mathf.PI / 180));
 		//xp = (int)(center.x + ((lenIt * bs) + swordDist + (bs/2)) * Mathf.Cos (pos * Mathf.PI / 180));
 		int yp = (int)Mathf.Round(center.y + (length + swordDist) * Mathf.Sin ((pos + (widIt * taper)) * Mathf.PI / 180));
@@ -590,7 +590,7 @@ public class circleAttack : Purpose {
 				self.hyperSpeed = (int)calcStat (minSpeed, (int)(maxSpeed * friction));//(int)(Mathf.Sin (swingi * (Mathf.PI / curSwing)) * (maxSpeed * friction)) + minSpeed;
 				if (self.hyperSpeed < minSpeed && !beingKnocked && friction != 1) {
 					//Debug.LogError ((int)(Mathf.Sin (swingi * (Mathf.PI / curSwing)) * (maxSpeed * friction)));
-					Debug.Log ("swingi " + swingi + " curSwing" + curSwing);
+					Debug.Log (soul.name + " swingi " + swingi + " curSwing" + curSwing);
 				}
 				//Debug.Log("min, max " + minSpeed + ", " + (maxSpeed * friction) + " = " + self.hyperSpeed + " speed");
 				if (self.hyperSpeed == minSpeed + maxSpeed) {
@@ -1512,7 +1512,6 @@ public class circleAttack : Purpose {
 				// perhaps there is a better solution, but when two attacks hit eachother 
 				// the other group gets destroyed before this loop is over
 				if (hitList [k]) {
-					Debug.Log (hitList [k].name);
 					//defense d = hitList [k].gameObject.GetComponent<defense> ();
 					Value v = hitList [k].gameObject.GetComponent<Value> ();
 					Knockable kn = hitList [k].gameObject.GetComponent<Knockable> ();
@@ -1523,7 +1522,7 @@ public class circleAttack : Purpose {
 						float otherPower = v.getValue ("knockBack");
 						// 4 is Shade block id, or perhaps anything created by a sword that we dont want their player to collide with(via player parented over the creation)
 						if (otherPlayer && hitList[k].id != 4) {
-							Debug.Log ("we got another player " + otherPlayer.name);
+							//Debug.Log ("we got another player " + otherPlayer.name);
 							Player op = otherPlayer.GetComponent<Player>();
 							if (op) {
 								ca = op.myAttack;
@@ -1541,9 +1540,9 @@ public class circleAttack : Purpose {
 						if (ca) {
 							soul.hitSword(ca);
 						}
-						Debug.Log("other's power: " + otherPower);
+						//Debug.Log("other's power: " + otherPower);
 						if (otherPower != -1 && otherPower < ourPower) {
-							Debug.Log(name + " we beat them ");
+							//Debug.Log(name + " we beat them ");
 							if (sd) {
 								sd.getHit(ourPower);
 							}
@@ -1824,7 +1823,7 @@ public class circleAttack : Purpose {
 						blade [k] [i].squareBody ();
 					} else {
 						Form f = blade [k] [i];
-						f.transform.GetChild (0).GetChild (0).transform.localScale = new Vector3 (f.width * 13f, f.length * 13f, 1);
+						f.transform.GetChild (0).GetChild (0).transform.localScale = new Vector3 (f.width * 7.69f, f.length * 7.69f, 1);
 						if (f.width % 2 == 0) {
 							f.transform.GetChild (0).GetChild (0).position = f.transform.position + new Vector3 (-0.5f, -0.5f, 0f);
 						} else {
@@ -1853,7 +1852,7 @@ public class circleAttack : Purpose {
 				blade [k] [i].length = size;
 				Form f = blade [k] [i];
 				if (f.transform.childCount > 0 && f.transform.GetChild(0).childCount > 0) {
-					f.transform.GetChild (0).GetChild (0).transform.localScale = new Vector3 (f.width * 13f, f.length * 13f, 1);
+					f.transform.GetChild (0).GetChild (0).transform.localScale = new Vector3 (f.width * 7.69f, f.length * 7.69f, 1);
 					if (f.width % 2 == 0) {
 						f.transform.GetChild (0).GetChild (0).position = f.transform.position + new Vector3 (-0.5f, -0.5f, 0f);
 					} else {

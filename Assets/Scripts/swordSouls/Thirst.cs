@@ -94,4 +94,21 @@ public class Thirst : SwordSoul {
 		}
 		hitFlaring = false;
 	}
+
+	public override void setColors(SwordAnimator an, int cn) {
+		anim = an;
+        setColors(cn);
+    }
+
+    public override void setSprites(bool on) {
+        base.setSprites(on);
+		for (int k = 0; k < will.bladeMulti; k++) {
+			for (int i = 0; i < will.blade [k].Count; i++) {
+				Transform tmp = will.blade[k][i].transform.GetChild(0);
+				if (tmp) {
+					tmp.gameObject.SetActive(on);
+				}
+			}
+		}
+    }
 }

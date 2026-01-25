@@ -12,6 +12,7 @@ public class mapTerrain : MonoBehaviour {
 	public GameObject woodFloor;
 	public GameObject rock;
 	public GameObject ruin;
+	public GameObject RuinBridge;
 	public GameObject debugFloor;
 
 	public Color[] floors;
@@ -45,7 +46,7 @@ public class mapTerrain : MonoBehaviour {
 			for (int y = 0; y < yEdge; y++) {
 				GameObject tmp = Instantiate (DebugCell, new Vector3 (x, y, 0), transform.rotation, transform) as GameObject;
 				Map.S.world [x, y] = tmp.GetComponent<Cell> ();
-				Map.S.world [x, y].heightMod += yEdge - y;
+				Map.S.world [x, y].heightMod += yEdge - y*10;
 				Map.S.world[x,y].setPos(x, y);
 			}
 		}
@@ -126,6 +127,9 @@ public class mapTerrain : MonoBehaviour {
 		if (map == 5) {
 			adventureRoom(-1);
 			return;
+		} else if (map == 1) {
+			Tiler t = tmp.GetComponent<Tiler>();
+			t.color = new Color(0.15f, 0.1f, 0.2f);
 		}
 		//Debug.Log ("level creating");
 
@@ -172,8 +176,8 @@ public class mapTerrain : MonoBehaviour {
 			int ey = yEdge - waterEdge;
 
 			fillAngle (waterForm, 47, 0, (int)(-yEdge * 0.3f), (int)Mathf.Sqrt (Mathf.Pow ((ex), 2) + Mathf.Pow ((ey), 2)) + (int)(xEdge * 0.187f), (int)(yEdge * 0.125f));
-			clearAngle (324, (int)(ex * 0.26), (int)(ey * 0.24), (int)(ex * 0.19f), (int)(ey * 0.12f));
-			fillAngle (wfForm, 324, (int)(ex * 0.26), (int)(ey * 0.24), (int)(ex * 0.19f), (int)(ey * 0.12f));
+			//clearAngle (324, (int)(ex * 0.26), (int)(ey * 0.24), (int)(ex * 0.19f), (int)(ey * 0.12f));
+
 
 			Vector2Int lakeCenter = new Vector2Int ((int)(ex * 0.65f), (int)(ey * 0.65f));
 			fillCircle (waterForm, lakeCenter, (int)(ex * 0.4f));
@@ -212,6 +216,12 @@ public class mapTerrain : MonoBehaviour {
 			fillCircle (ruinForm, new Vector2Int ((int)(ex * 0.68), (int)(ey * 0.16)), (int)(ex * 0.05));
 			fillCircle (ruinForm, new Vector2Int ((int)(ex * 0.73), (int)(ey * 0.24)), (int)(ex * 0.05));
 			fillCircle (ruinForm, new Vector2Int ((int)(ex * 0.87), (int)(ey * 0.3)), (int)(ex * 0.05));
+
+			//bridge
+			GameObject bridge = Instantiate(RuinBridge);
+			bridge.transform.position = new Vector3(49, 26.497f, 0);
+			clearAngle(315, (int)(ex * 0.31), (int)(ey * 0.3), (int)(ex * 0.28f), (int)(ey * 0.12f));
+			fillAngle (wfForm, 315, (int)(ex * 0.31), (int)(ey * 0.3), (int)(ex * 0.28f), (int)(ey * 0.12f));
 		} else if (map == 3) {
 			Form lavaForm = Instantiate (lava).GetComponent<Form> ();
 
@@ -301,36 +311,8 @@ public class mapTerrain : MonoBehaviour {
 		}
 	}
 
-	public void clearRect(int cx, int cy, int sx, int sy) {
-		clearRect(new Vector2Int(cx, cy), sx, sy);
-	}
 
-	public void clearRect(Vector2Int center, int sizeX, int sizeY){
-		int xMod = sizeX % 2;
-		int yMod = sizeY % 2;
-		for (int x = center.x - sizeX / 2; x < center.x + sizeX / 2 + xMod; x++) {
-			for (int y = center.y - sizeY / 2; y < center.y + sizeY / 2 + yMod; y++){
-				if (x >= 0 && x < Map.S.worldSizeX && y >= 0 && y < Map.S.worldSizeY) {
-					Map.S.world [x, y].empty ();
-				}
-			}
-		}
-	}
 
-	void clearAngle(int angle, int sX, int sY, int len, int wid) {
-		for (int k = 0; k < wid; k++) {
-			float x = sX + k * Mathf.Cos (((angle + 90) % 360) * Mathf.PI / 180);
-			float y = sY + k * Mathf.Sin (((angle + 90) % 360) * Mathf.PI / 180);
-			for (int i = 0; i < len; i++) {
-				if (x >= 0 && x < xEdge && y >= 0 && y < yEdge) {
-					clearRect (new Vector2Int ((int)x, (int)y), 2, 2);
-					//Map.S.world [x, y].formEnter (f);
-				}
-				x += Mathf.Cos (angle * Mathf.PI / 180);
-				y += Mathf.Sin (angle * Mathf.PI / 180);
-			}
-		}
-	}
 
 	public void clearCircle(int cx, int cy, int s) {
 		clearCircle(new Vector2Int(cx, cy), s);
@@ -369,14 +351,33 @@ public class mapTerrain : MonoBehaviour {
 	}
 
 	public void fillRect(Form f, Vector2Int center, int sizeX, int sizeY){
-		for (int x = center.x - sizeX / 2; x < center.x + sizeX / 2; x++) {
-			for (int y = center.y - sizeY / 2; y < center.y + sizeY / 2; y++){
+		int xMod = sizeX % 2;
+		int yMod = sizeY % 2;
+		for (int x = center.x - sizeX / 2; x < center.x + sizeX / 2 + xMod; x++) {
+			for (int y = center.y - sizeY / 2; y < center.y + sizeY / 2 + yMod; y++){
 				if (x >= 0 && x < Map.S.worldSizeX && y >= 0 && y < Map.S.worldSizeY) {
 					Map.S.world [x, y].formEnter (f);
 				}
 			}
 		}
 	}
+	
+	public void clearRect(int cx, int cy, int sx, int sy) {
+		clearRect(new Vector2Int(cx, cy), sx, sy);
+	}
+
+	public void clearRect(Vector2Int center, int sizeX, int sizeY){
+		int xMod = sizeX % 2;
+		int yMod = sizeY % 2;
+		for (int x = center.x - sizeX / 2; x < center.x + sizeX / 2 + xMod; x++) {
+			for (int y = center.y - sizeY / 2; y < center.y + sizeY / 2 + yMod; y++){
+				if (x >= 0 && x < Map.S.worldSizeX && y >= 0 && y < Map.S.worldSizeY) {
+					Map.S.world [x, y].empty ();
+				}
+			}
+		}
+	}
+
 
 	void fillAngle(Form f, int angle, int sX, int sY, int len, int wid) {
 		for (int k = 0; k < wid; k++) {
@@ -385,6 +386,21 @@ public class mapTerrain : MonoBehaviour {
 			for (int i = 0; i < len; i++) {
 				if (x >= 0 && x < xEdge && y >= 0 && y < yEdge) {
 					fillRect (f, new Vector2Int ((int)x, (int)y), 2, 2);
+					//Map.S.world [x, y].formEnter (f);
+				}
+				x += Mathf.Cos (angle * Mathf.PI / 180);
+				y += Mathf.Sin (angle * Mathf.PI / 180);
+			}
+		}
+	}
+
+	void clearAngle(int angle, int sX, int sY, int len, int wid) {
+		for (int k = 0; k < wid; k++) {
+			float x = sX + k * Mathf.Cos (((angle + 90) % 360) * Mathf.PI / 180);
+			float y = sY + k * Mathf.Sin (((angle + 90) % 360) * Mathf.PI / 180);
+			for (int i = 0; i < len; i++) {
+				if (x >= 0 && x < xEdge && y >= 0 && y < yEdge) {
+					clearRect (new Vector2Int ((int)x, (int)y), 2, 2);
 					//Map.S.world [x, y].formEnter (f);
 				}
 				x += Mathf.Cos (angle * Mathf.PI / 180);

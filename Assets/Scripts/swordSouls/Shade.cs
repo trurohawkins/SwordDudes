@@ -142,7 +142,22 @@ public class Shade : SwordSoul {
 		miasmaTimers = new List<int>();
 	}
 
-	public void shadeBodyHit(Form col, int x, int y) {
+    public override void setColors(int pNum) {
+        base.setColors(pNum);
+		if (anim) {
+			anim.setColor(mainColor[pNum], 0);
+			anim.setColor(subColor[pNum], 1);
+			anim.setColor(powerColor[pNum], 2);
+			anim.setColor(subColor[pNum], 3);
+		}
+    }
+
+	public override void setColors(SwordAnimator an, int cn) {
+		anim = an;
+		setColors(cn);
+	}
+
+    public void shadeBodyHit(Form col, int x, int y) {
 		/*
 		Value v = col.gameObject.GetComponent<Value>();
 		if (v) {

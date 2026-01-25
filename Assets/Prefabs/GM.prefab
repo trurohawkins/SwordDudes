@@ -52,22 +52,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausedStart: 1
+  doSplash: 0
+  drawSprites: 1
   player: {fileID: 1618055423935892, guid: a02d5543945fc194ab17ed57e5919c41, type: 2}
-  playerColors:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  startPoses: 0000000000000000
+  splashScreen: {fileID: 1887385884828264, guid: 4eb5199e5aefca44fa9a877a0be750e4,
+    type: 2}
+  playerSpawner: {fileID: 1878634059810840, guid: 3f05c285a0697ab40aac85c7cc15c773,
+    type: 2}
+  startPoses: 5a0000000000000000000000
   indicator: {fileID: 1707672483259026, guid: 7e7194cbbb0b3af4f91606d010be9cbe, type: 2}
   menu: {fileID: 1915451480959312, guid: 145a221ee05551746b946ef03d484c68, type: 2}
   player1: {fileID: 1710290563242022, guid: 9715fb7dca3692d44a3496964c22ade6, type: 2}
   playerCpu: {fileID: 1505147483119558, guid: 1f85155f75e985c4bb8702116f956ad7, type: 2}
   players: []
-  hasSwords: 0101
+  hasSwords: 01010101
+  camMinDist: 20
   created: 0
   deathCount: 2
-  rounds: 1
+  rounds: 0
   myPlayer: 
   dirs: []
   invalidDest: {x: 0, y: 0}
   flame: {fileID: 1827848924280576, guid: 4d756c38b3520694e9b221adec4baee5, type: 2}
+  curDM: {fileID: 0}
+  camSpeed: 0.1
+  camZoomSpeed: 0.1
+  fixedCamera: 0
+  stepSpeed: 1
+  zoomOut: 5
+  bottomBorder: 8
+  UiOnLeft: 1
+  zAmnt: 0
+  zoomDistances: 0f0000001b00000028000000
+  distanceFactor: 0.5
   gameOver: 0
+  respawnTime: 3

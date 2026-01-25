@@ -132,7 +132,7 @@ public class Map : MonoBehaviour {
 		flowing = true;
 	}
 
-	public void spawnForm(GameObject newForm, int x, int y){
+	public void spawnForm(GameObject newForm, int x, int y) {
 		Form f = newForm.GetComponent<Form>();
 		if (f.body.Length == 0) {
 			//Debug.Log("no body on " + newForm.name);

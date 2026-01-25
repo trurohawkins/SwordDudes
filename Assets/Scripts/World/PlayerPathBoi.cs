@@ -72,7 +72,16 @@ public class PlayerPathBoi : PathBoi {
     }
 
     public override Vector2Int myCenter() {
-		return guy.attack.getCenter();
+		if (guy) {
+			if (guy.attack) {
+				return guy.attack.getCenter();
+			} else {
+				Debug.Log(name + " no attack");
+			}
+		} else {
+			Debug.Log(name + " no guy ");
+		}
+		return new Vector2Int((int)transform.position.x, (int)transform.position.y);
 	}
 
 	public override void useRangeAttack() {

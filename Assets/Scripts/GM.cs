@@ -10,6 +10,7 @@ public class GM : MonoBehaviour {
 	public bool drawSprites;
 	public GameObject player;
 	public GameObject splashScreen;
+	public GameObject playerSpawner;
 	public int[] startPoses;
 
 	public GameObject indicator;
@@ -66,6 +67,9 @@ public class GM : MonoBehaviour {
 		//camMaxDist = Camera.main.orthographicSize;
 		Map.S.createWorld ();
 		if (GameInfo.S) {
+			if (GameInfo.S.level != 5) {
+				Debug.Log("we are not playing saga");
+			}
 			if (!GameInfo.S.multiPlayer) {
 				Debug.Log (GameInfo.S.enemyLevel);
 				singlePlayerInfo.S.parseStage(GameInfo.S.songs[0], GameInfo.S.enemyLevel);
@@ -452,12 +456,19 @@ public class GM : MonoBehaviour {
 	bool musicStarted = false;
 	
 	public void spawnPlayer(GameObject a, int xPos, int yPos) {
-		Form f = a.GetComponent<Form> ();
+		/*Form f = a.GetComponent<Form> ();
 		f.squareBody ();
 		Map.S.spawnForm(a, xPos, yPos);
 		if(!f.spawned){
 			Debug.Log ("form no good " + xPos + players.Count);
 		}
+		*/
+
+		a.transform.position = new Vector3(xPos, yPos, 0);
+		//Debug.Log("xPOs: " + xPos + " yPos: " + yPos + " pos: " + a.transform.position);
+		spawningEnemy spawn = Instantiate(playerSpawner, new Vector3(xPos, yPos, 0), transform.rotation).GetComponent<spawningEnemy>();
+		spawn.receivePlayer(a);
+
 		//Player p = a.GetComponent<Player> ();
 		//p.getNum(players.Count);
 		//players.Add(p);

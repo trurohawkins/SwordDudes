@@ -166,10 +166,10 @@ public class Gin : SwordSoul {
 				//Debug.LogError("start swing");
 				//Debug.LogError("reveal " + will.beingKnocked);
 				float increase = getPower();
+				if (gAnim) {
+					gAnim.setSize(increase);
+				}
 				if (!oldSchool && increase != 0) {
-					if (gAnim) {
-						gAnim.setSize(increase);
-					}
 					coolDown(energy - baseEnergy, baseEnergy);
 					bodyFX.curRange = 0;
 				}

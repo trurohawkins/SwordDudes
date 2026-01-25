@@ -79,7 +79,7 @@ MonoBehaviour:
   curRoom: {fileID: 0}
   dunSize: {x: 3, y: 3}
   roomNum: 4
-  progress: 3
+  progress: 0
   baseDoorSpace: 10
   roomTypes:
   - {fileID: 1747370278849680, guid: 3be9372ead6bd384680a50a05a4aa699, type: 2}
@@ -135,5 +135,5 @@ MonoBehaviour:
   bossScenes:
   - {fileID: 1758655688110606, guid: 2cb9458753b25a94a84c59c51260ff14, type: 2}
   - {fileID: 1833057964784818, guid: 779f9358305ed174a88a68626ffdc0ea, type: 2}
-  mute: 1
+  mute: 0
   curBoss: 0

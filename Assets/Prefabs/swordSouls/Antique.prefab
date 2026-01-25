@@ -126,7 +126,7 @@ MonoBehaviour:
   slowDown: 0
   dodgeSpeed: 5
   dodgeLength: 20
-  dodgeRecover: 20
+  dodgeRecover: 10
   dodgeStart: 2
   dodgeWindow: 0.6
   attackSpeed: {x: 3, y: 12}
@@ -167,10 +167,11 @@ MonoBehaviour:
   swingPause: 2
   swordAlpha: 1
   curGear: 1
-  gearHeatMod: 1
+  gearHeatMod: 2
   gearCoolMod: 1
   baseRange: 1
   flareRange: 0
+  chunkAnimation: 0
   minFxRange: 1
   maxFxRange: 6
   oldSchool: 0

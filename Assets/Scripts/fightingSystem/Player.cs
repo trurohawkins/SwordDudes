@@ -149,6 +149,23 @@ public class Player : Purpose {
 		}
 	}
 
+	public void turnOffSprites() {
+		graphics.gameObject.SetActive(false);
+		if (myAttack) {
+
+			myAttack.getSoul().setSprites(false);
+		} else {
+			//Debug.Log("no anim yet");
+		}
+	}
+
+	public void turnOnSprites() {
+		graphics.gameObject.SetActive(true);
+		if (myAttack) {
+			myAttack.getSoul().setSprites(true);
+		}
+	}
+
 	public void setUpSword() {
 		myAttack = Instantiate (soulType).GetComponent<circleAttack> ();
 		myAttack.gameObject.GetComponent<SwordSoul> ().setColors (colorNum);
@@ -171,6 +188,7 @@ public class Player : Purpose {
         if (GM.S.drawSprites && graphics) {
             if (myAttack) {
                 graphics.setColors(myAttack.gameObject.GetComponent<SwordSoul>(), colorNum);
+				myAttack.getSoul().setSprites(false);
             }
         } else {
 			if (!GM.S.drawSprites)  {

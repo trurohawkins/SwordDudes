@@ -175,12 +175,12 @@ MonoBehaviour:
   mass: {x: 0, y: 35}
   swordWeight: 15
   swordAccel: 0.005
-  speedBoost: 2
+  speedBoost: 1
   slowDown: 0
-  dodgeSpeed: 3
+  dodgeSpeed: 2
   dodgeLength: 20
   dodgeRecover: 18
-  dodgeStart: 8
+  dodgeStart: 6
   dodgeWindow: 0.35
   attackSpeed: {x: 5, y: 8}
   chargedSpeed: {x: 12, y: 35}
@@ -221,6 +221,7 @@ MonoBehaviour:
   gearCoolMod: 1
   baseRange: 2
   flareRange: 4
+  chunkAnimation: 0
   burnDamage: 0.2
   zapDamage: 7
   zapDeathTime: 3

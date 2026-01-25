@@ -175,10 +175,10 @@ MonoBehaviour:
   swordAccel: 0.05
   speedBoost: 1
   slowDown: 0
-  dodgeSpeed: 3
-  dodgeLength: 20
-  dodgeRecover: 25
-  dodgeStart: 5
+  dodgeSpeed: 1
+  dodgeLength: 25
+  dodgeRecover: 35
+  dodgeStart: 10
   dodgeWindow: 0.5
   attackSpeed: {x: 1, y: 5}
   chargedSpeed: {x: 3, y: 9}
@@ -220,6 +220,7 @@ MonoBehaviour:
   gearCoolMod: 0
   baseRange: 5
   flareRange: 0
+  chunkAnimation: 0
   maxGrowth: 7
   growInterval: 50
   dieInterval: 10

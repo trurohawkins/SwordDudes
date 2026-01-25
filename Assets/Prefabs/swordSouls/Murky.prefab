@@ -156,7 +156,7 @@ MonoBehaviour:
   fx: {fileID: 1214235195810502, guid: b56175cc5f9b55641af112dbe6f66493, type: 2}
   dodgeParticle: {fileID: 1649030013574862, guid: 398aa62c5aa16c64f9fad299f91b8581,
     type: 2}
-  SwordAnim: {fileID: 1300347195633114, guid: 3a205412750f9e84a9ee51faa83d224b, type: 2}
+  SwordAnim: {fileID: 1506175912376232, guid: e88d3a181ba1ccf46999ec11c3ef3580, type: 2}
   hitEffect: {fileID: 1766578580420552, guid: 4fd4e7312e8cdfe4ca1a24cf6165335e, type: 2}
   attackWidth: 1
   attackLength: 1
@@ -175,10 +175,10 @@ MonoBehaviour:
   swordAccel: 0.005
   speedBoost: 0
   slowDown: 0
-  dodgeSpeed: 3
+  dodgeSpeed: 2
   dodgeLength: 20
-  dodgeRecover: 20
-  dodgeStart: 7
+  dodgeRecover: 30
+  dodgeStart: 4
   dodgeWindow: 0.5
   attackSpeed: {x: 3, y: 10}
   chargedSpeed: {x: 5, y: 8}

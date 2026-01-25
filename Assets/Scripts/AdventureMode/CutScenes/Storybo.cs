@@ -21,6 +21,11 @@ public class Storybo : MonoBehaviour {
         //finishShot();
     }
 
+    void Start() {
+        GameObject canvas = GameObject.FindGameObjectWithTag ("canvas");
+        dia.transform.SetAsLastSibling();
+    }
+
     public Shot startNextShot (int dir, int progress) {
         finishShot(dir, progress);
         if (curShot) {
