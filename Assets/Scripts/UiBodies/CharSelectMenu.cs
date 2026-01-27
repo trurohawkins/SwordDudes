@@ -53,7 +53,7 @@ public class CharSelectMenu : UIMenu {
             MainMenu.S.setCharMenu(this);
         }
         for (int i = 0; i < blocked.Length; i++) {
-            blocked[i] = true;
+            blocked[i] = 1;
         }
     }
 
@@ -76,7 +76,6 @@ public class CharSelectMenu : UIMenu {
 	}
 
     public override void selectButton(int player, Vector2Int chosen) {
-        //Debug.Log("select button " + player + " " + playerNums[player]); // line below caused error, cuz playernum is -1 sometimes
         if (playerNums[player] >= 0) {
             if (GameInfo.S.songs[playerNums[player]] < 0) {
                 MainMenu.S.setPlayerGraphics(playerNums[player], -1);
@@ -174,7 +173,7 @@ public class CharSelectMenu : UIMenu {
         charFunction screen = MainMenu.S.getCharacterScreen(playerNum);
         som.getInfo(this, playerNum, player, screen.type, screen.num);
         menuUp[player] = som;
-        blocked[player] = true;
+        blocked[player] = 1;
     }
 
     public selectButton moveCursorToSword(int player, int soul) {
@@ -214,8 +213,8 @@ public class CharSelectMenu : UIMenu {
         //Debug.Log(player + " is pressing back " + playerNums[player]);
         //if (MainMenu.S.checkActiveControlScheme(player)) {
         if (MainMenu.S.getScreenOfController(player)) {
-            if (blocked[player]) {
-                blocked[player] = false;
+            if (blocked[player] != -1) {
+                blocked[player] = -1;
             }
             if (GameInfo.S.songs[playerNums[player]] >= 0) {
                 GameInfo.S.setSong(playerNums[player], -1);
@@ -231,7 +230,6 @@ public class CharSelectMenu : UIMenu {
     }
 
     public override void holdBack(int player) {
-        Debug.Log("holdign back " + player);
         /*
         if (MainMenu.S.checkActiveControlScheme(player)) {
             Debug.Log("has active control");
@@ -281,10 +279,15 @@ public class CharSelectMenu : UIMenu {
         }
     }
 
-    public void setBlocked(int scheme, bool val) {
+    public void setBlocked(int scheme, int val) {
         if (scheme >= 0 && scheme <= blocked.Length) {
             blocked[scheme] = val;
         }
+    }
+
+    public IEnumerator pauseBlock(int scheme, int val) {
+        yield return new WaitForSeconds(1);
+        setBlocked(scheme, val);
     }
 
     public bool checkMenu(int scheme) {

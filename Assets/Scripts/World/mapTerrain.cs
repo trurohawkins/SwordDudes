@@ -19,7 +19,7 @@ public class mapTerrain : MonoBehaviour {
 	public GameObject[] tFloors;
 	public GameObject[] walls;
 	public Vector2Int[] worldSizes;
-
+	public Vector2Int dungeonSize;
 	public bool forceSpawn = false;
 	public Vector3Int[] forceSpawns;
 	int force = 0;
@@ -34,13 +34,13 @@ public class mapTerrain : MonoBehaviour {
 		if (GameInfo.S) {
 			map = GameInfo.S.level;
 		}
-		//if (map != 5) {
+		if (map != -1) {
 			Map.S.worldSizeX = xEdge = worldSizes[map].x;
 			Map.S.worldSizeY = yEdge = worldSizes[map].y;
-		/*} else {
-			Map.S.worldSizeX = xEdge = dungeonRooms * dungeonRoomSize;
-			Map.S.worldSizeY = yEdge = xEdge;
-		}*/
+		} else {
+			Map.S.worldSizeX = xEdge = dungeonSize.x;
+			Map.S.worldSizeY = yEdge = dungeonSize.y;
+		}
 		Map.S.world = new Cell[xEdge, yEdge];
 		for (int x = 0; x < xEdge; x++) {
 			for (int y = 0; y < yEdge; y++) {
@@ -69,6 +69,16 @@ public class mapTerrain : MonoBehaviour {
 	//direction we are coming from
 	public void adventureRoom(int dir) {
 		if (!dm) {
+			GameObject tmp = Instantiate (walls[1]);
+			Map.S.terrain = tmp.GetComponent<Form> ();
+			if (GM.S.drawSprites) {
+				spawnBgFloor(1);
+			} else {
+				bgFloor = Instantiate (debugFloor, new Vector3 (xEdge / 2f, yEdge / 2f, 0.2f), transform.rotation);
+				bgFloor.transform.localScale = new Vector3 (xEdge, yEdge, 1);
+				floorRend = bgFloor.GetComponent<SpriteRenderer> ();
+				bgFloor.GetComponent<SpriteRenderer>().color = floors [1];
+			}
 			dm = Instantiate(dungeonMaster).GetComponent<DungeonMaster>();//gameObject.GetComponent<DungeonMaster>();
 			GM.S.curDM = dm;
 			dm.getCreator(this);
@@ -112,6 +122,10 @@ public class mapTerrain : MonoBehaviour {
 	}
 
 	public void createLevel() {
+		if (map == -1) {
+			adventureRoom(-1);
+			return;
+		}
 		GameObject tmp = Instantiate (walls[map]);
 		Map.S.terrain = tmp.GetComponent<Form> ();
 		float xe = xEdge;
@@ -122,12 +136,9 @@ public class mapTerrain : MonoBehaviour {
 			bgFloor = Instantiate (debugFloor, new Vector3 (xe / 2f, ye / 2f, 0.2f), transform.rotation);
 			bgFloor.transform.localScale = new Vector3 (xe, ye, 1);
 			floorRend = bgFloor.GetComponent<SpriteRenderer> ();
-			bgFloor.GetComponent<SpriteRenderer>().color = floors [GameInfo.S.level];
+			bgFloor.GetComponent<SpriteRenderer>().color = floors [map];
 		}
-		if (map == 5) {
-			adventureRoom(-1);
-			return;
-		} else if (map == 1) {
+		if (map == 1) {
 			Tiler t = tmp.GetComponent<Tiler>();
 			t.color = new Color(0.15f, 0.1f, 0.2f);
 		}
@@ -236,11 +247,12 @@ public class mapTerrain : MonoBehaviour {
 			fillCircle (lavaForm, new Vector2Int (Map.S.worldSizeX / 2, yEdge / 2), (int)(xEdge * 0.2f));
 
 		} else if (map == 4) {
+			Form rockForm = Instantiate (rock).GetComponent<Form> ();
 			int xSpacing = xEdge/9;
 			int ySpacing = yEdge/9;
-			for (int x = 0; x < xEdge; x += xSpacing) {
-				for (int y = 0; y < yEdge; y += ySpacing) {
-					fillCircle (Map.S.terrain, new Vector2Int (x, y), 8);
+			for (int x = xSpacing; x < xEdge - xSpacing; x += xSpacing) {
+				for (int y = ySpacing; y < yEdge - ySpacing; y += ySpacing) {
+					fillCircle (rockForm, new Vector2Int (x, y), 8);
 				}
 			}
 			float bigEdge = 0.9f;

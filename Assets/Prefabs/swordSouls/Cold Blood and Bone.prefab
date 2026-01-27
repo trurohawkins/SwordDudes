@@ -165,7 +165,7 @@ MonoBehaviour:
   attackTaper: -0.6
   attackDist: -1
   maxStrikes: 600
-  damage: {x: 3, y: 10}
+  damage: {x: 2, y: 25}
   staggerDamage: {x: 5, y: 10}
   staggerTime: 90
   knockBackDamage: {x: 1, y: 10}
@@ -179,7 +179,7 @@ MonoBehaviour:
   dodgeRecover: 20
   dodgeStart: 8
   dodgeWindow: 0.6
-  attackSpeed: {x: 2, y: 18}
+  attackSpeed: {x: 2, y: 12}
   chargedSpeed: {x: 0, y: 0}
   slowSpeeds: {x: 0, y: 0}
   fastSpeeds: {x: 1.5, y: 1.5}
@@ -206,9 +206,9 @@ MonoBehaviour:
   - stagger
   - knockBack
   multis:
-  - 3
-  - 5
-  - 2
+  - 1
+  - 1
+  - 1
   burnDefenses: {x: 0, y: 0, z: 0}
   description: This blade hungrily thirsts for blood, it saps you of your health.
     But upon a successful strike it steals enemy's health and heals you.

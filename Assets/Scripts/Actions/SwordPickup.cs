@@ -40,6 +40,7 @@ public class SwordPickup : DungeonObject {
 
             p.hasSword = GM.S.hasSwords[p.playerNum] = true;
             p.setUpSword();
+            p.myAttack.getSoul().setSprites(true);
             //p.getDef().setUIColor();
             Vector2Int pos = self.centerPoint;
             self.die();

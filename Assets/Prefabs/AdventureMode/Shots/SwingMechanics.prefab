@@ -52,7 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: 0
-  bossShot: 0
   pause: 1
   speaker: 2
   doorSpace: 5
@@ -64,12 +63,14 @@ MonoBehaviour:
   analog: []
   key: []
   waveText:
-  - as you swing, your speed starts slow and gets faster
-  - the faster your swing is going the more damage you do!
+  - as you swing, your sword starts slow and gets faster
+  - the faster your swing is going the more damage you do! And that is especially
+    true for knock back
   afterText: []
   afterImage: {fileID: 0}
   pre: {fileID: 0}
-  next: []
+  next:
+  - {fileID: 1745050733238224, guid: 1376c98b719495d45ba237c4fd9c8f1f, type: 2}
   storyPoint: []
   myRoom: {fileID: 0}
   read: 0

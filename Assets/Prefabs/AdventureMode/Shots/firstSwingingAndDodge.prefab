@@ -58,7 +58,7 @@ MonoBehaviour:
   leadUp: 0
   image: {fileID: 0}
   text:
-  - Looks like thats the thing making these messes, can you take care of it?
+  - Looks like your needed more as pest control, go in there and take care of it!
   - -dodge- and -move- at the same time to dodge through that wall
   - point in a direction with -move- and press -dodge- to dash dodge
   analog: []
@@ -69,7 +69,6 @@ MonoBehaviour:
   - ' it is useful for avoiding damage'
   afterText:
   - Im glad youre not dead! otherwise Id have to do a lot of paperwork...
-  - To celebrate I have got something for you in the next room!
   afterImage: {fileID: 0}
   pre: {fileID: 0}
   next:

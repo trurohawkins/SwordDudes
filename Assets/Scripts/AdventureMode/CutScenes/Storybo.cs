@@ -53,10 +53,10 @@ public class Storybo : MonoBehaviour {
 
     public void finishShot(int dir, int progress) {
         if (curShot) {
-            Debug.Log(curShot.name);
+            //Debug.Log(curShot.name);
             Shot shot = curShot.GetComponent<Shot>();
             if (shot.roomType == 0) {
-                if (curBoard < board.Length) {
+                if (curBoard + 1 < board.Length) {
                     curBoard++;
                     nextShot = board[curBoard];
                 } else {
@@ -79,7 +79,9 @@ public class Storybo : MonoBehaviour {
 
     public void setBoard(int b) {
         curBoard = b;
-        nextShot = board[curBoard];
+        if (curBoard < board.Length) {
+            nextShot = board[curBoard];
+        }
     }
 
     public int curBoss = 0;

@@ -67,7 +67,7 @@ public class GM : MonoBehaviour {
 		//camMaxDist = Camera.main.orthographicSize;
 		Map.S.createWorld ();
 		if (GameInfo.S) {
-			if (GameInfo.S.level != 5) {
+			if (GameInfo.S.level != -1) {
 				Debug.Log("we are not playing saga");
 			}
 			if (!GameInfo.S.multiPlayer) {
@@ -167,7 +167,7 @@ public class GM : MonoBehaviour {
 				players [i].GetComponent<Controller> ().controlNum = nums [i];//GameInfo.S.p1ControlNum;
 			}
 		}
-		if (GameInfo.S.level == 5) {
+		if (GameInfo.S.level == -1) {
 			pausedStart = false;
 			doSplash = false;
 		}
@@ -474,6 +474,14 @@ public class GM : MonoBehaviour {
 		//players.Add(p);
 	}
 
+	public void respawnPlayer(Player p, bool reset) {
+		//Debug.Log("xPOs: " + xPos + " yPos: " + yPos + " pos: " + a.transform.position);
+		Vector3Int spawnPos = Map.S.getSpawn();
+		spawningEnemy spawn = Instantiate(playerSpawner, new Vector3(spawnPos.x, spawnPos.y, 0), transform.rotation).GetComponent<spawningEnemy>();
+		spawn.receivePlayer(p, spawnPos, reset);
+		//p.respawn (Map.S.getSpawn (), reset, true); 
+	}
+
 	// for dungeon mode, spawning enemy players, maybe gonna break something?
 	public void addPlayer(Player p) {
 		players.Add(p);
@@ -591,8 +599,9 @@ public class GM : MonoBehaviour {
 			if (players [pNum].getDeaths () < deathCount || pNum == winner) {
 				yield return new WaitForSeconds (respawnTime);
 				if (!curDM) {
-					Map.S.checkSpawns ();	
-					players [pNum].respawn (Map.S.getSpawn (), true, true); 
+					Map.S.checkSpawns ();
+					respawnPlayer(players[pNum], true);
+					
 				} else {
 
 				}
@@ -758,7 +767,8 @@ public class GM : MonoBehaviour {
 
 			for (int i = 0; i < players.Count; i++) {
 				if (players [i]) {
-					players [i].respawn (Map.S.getSpawn (), false, true);
+					//players [i].respawn (Map.S.getSpawn (), false, true);
+					respawnPlayer(players[i], false);
 				}
 			}
 			StartCoroutine (countDown ());

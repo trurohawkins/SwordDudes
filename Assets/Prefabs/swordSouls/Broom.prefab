@@ -227,11 +227,11 @@ MonoBehaviour:
   swordAccel: 0.005
   speedBoost: 0
   slowDown: 0
-  dodgeSpeed: 3
-  dodgeLength: 15
-  dodgeRecover: 20
-  dodgeStart: 5
-  dodgeWindow: 0.3
+  dodgeSpeed: 2
+  dodgeLength: 20
+  dodgeRecover: 30
+  dodgeStart: 4
+  dodgeWindow: 0.5
   attackSpeed: {x: 1, y: 10}
   chargedSpeed: {x: 0, y: 0}
   slowSpeeds: {x: 1, y: 1}

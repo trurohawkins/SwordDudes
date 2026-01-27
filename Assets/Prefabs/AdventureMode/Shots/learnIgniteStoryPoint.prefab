@@ -64,6 +64,7 @@ MonoBehaviour:
   staggerThreshold: -1
   recoverySpeed: 0
   weight: -1
+  bodyHeat: 5
   backStabDefense: 0
   dodging: 0
   poises: []
@@ -97,6 +98,7 @@ MonoBehaviour:
   killTarget: 0
   spawned: 0
   searchForSpot: 0
+  partOfWave: 0
   text:
   - good job! You can also use -ignite- to speed up your swing and the heat
   analogText: []
@@ -108,7 +110,7 @@ MonoBehaviour:
   pauser: 1
   dia: {fileID: 0}
   check: {fileID: 0}
-  noIgniteTime: 200
+  noIgniteTime: 400
 --- !u!114 &114924381363920914
 MonoBehaviour:
   m_ObjectHideFlags: 1

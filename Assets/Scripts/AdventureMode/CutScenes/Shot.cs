@@ -92,9 +92,8 @@ public class Shot : MonoBehaviour {
         if (!narrator.getBroom()) {
             //Debug.Log("poo poo broom two");
             //creator.clearRect((int)(Map.S.worldSizeX * 0.666f), (int)(Map.S.worldSizeY * 0.2f), 20, 10);
-            Vector2Int p = new Vector2Int(45, 55);
-            //creator.fillRect(p, 25, 25);
-            room.dm.spawnSword(10, p, room);
+            //Vector2Int p = new Vector2Int(45, 55);
+            //room.dm.spawnSword(10, p, room);
             //room.dm.spawnSword(7, new Vector2Int(45, 35), room);
             //room.dm.spawnSword(10, new Vector2Int(55, 55), room);
             //room.dm.makeEnemy(45, 60, room);
@@ -112,7 +111,6 @@ public class Shot : MonoBehaviour {
 
     public virtual void cleanUpRoom(DungeonRoom room, mapTerrain creator) {
         // stop dialogue from ta;king
-        Debug.Log("ckeaning up room");
         if (narrator.dia.isWriting()) {
             Debug.LogError("stop writing");
             narrator.dia.stopWriting();

@@ -9,13 +9,16 @@ public class LearnAboutHeat : Shot {
 
     public override void shapeRoom(DungeonRoom room, mapTerrain creator, int dir) {
         stories = new List<StoryPoint>();
+        room.doors[0] = true;
+        /*
         for (int i = 0; i < 4; i++) {
             room.doors[i] = true;
         }
+        */
         center = new Vector2Int(Map.S.worldSizeX/2, Map.S.worldSizeY/2);
         IgniteDialogue igDia = spawnStoryPoint(storyPoint[0], center.x, center.y).GetComponent<IgniteDialogue>();
         creator.clearCircle(center, 45);
-        room.setHallSize(15, 20);
+        room.setHallSize(20, 20);
         /*
         Vector2Int a;
         Vector2Int b;
@@ -27,13 +30,18 @@ public class LearnAboutHeat : Shot {
             b = new Vector2Int(65, center.y);
         }
         */
-        Vector2Int a= new Vector2Int(center.x, 66);
-        Vector2Int b = new Vector2Int(center.x, 24);
-        Vector2Int c = new Vector2Int(24, center.y);
-        Vector2Int d = new Vector2Int(66, center.y);
-        Debug.Log(a + " " + b);
-        room.connectRoom(a, b);
-        room.connectRoom(c, d);
+        Vector2Int sides = new Vector2Int((int)(Map.S.worldSizeX * 0.66f), (int)(Map.S.worldSizeY * 0.33f));
+
+        
+        Vector2Int a = new Vector2Int(center.x, sides.x);
+        Vector2Int b = new Vector2Int(center.x, sides.y);
+        Vector2Int c = new Vector2Int(sides.y, center.y);
+        Vector2Int d = new Vector2Int(sides.x, center.y);
+        
+        //Debug.Log(a + " " + b);
+        room.connectRoom(new Vector2Int(center.x, (int)(Map.S.worldSizeY * 0.85f)), new Vector2Int(center.x, (int)(Map.S.worldSizeY * 0.15f)));
+        //room.connectRoom(c, d);
+        
         int heat = 10;
         Obstacle ob = room.dm.spawnTarget(2, -1, center + new Vector2Int(0, -6), room).GetComponent<Obstacle>();
         ob.setHeat(heat);
@@ -42,6 +50,7 @@ public class LearnAboutHeat : Shot {
         ob.setHeat(heat);
         igDia.check = ob;
         ob.partOfWave = true;
+        
         DungeonObject dunA = room.dm.makeEnemy(a.x, a.y, room);
         DungeonObject dunB = room.dm.makeEnemy(b.x, b.y, room);
 
@@ -54,6 +63,7 @@ public class LearnAboutHeat : Shot {
         room.addToWave(dunA);
         room.addToWave(dunB);
         curDir = dir;
+        
         //room.addToWave(room.dm.spawnHeal(center + new Vector2Int(0, 12), room));
     }
 

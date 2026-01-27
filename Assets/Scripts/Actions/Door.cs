@@ -60,15 +60,16 @@ public class Door : DungeonObject {
                 //self.height = 1;
                 self.leaveSpace();
                 if (dir % 2 == 0) {
-                    self.length = 1;
+                    //self.length = 1;
                     if (dir == 2) {
-                        self.centerPoint.y -= 1;
+                        //self.centerPoint.y -= 1;
                         //pos = self.centerPoint;
                     }
                 } else if (dir % 2 == 1) {
-                    self.width = 1;
+                    //self.width = 1;
                     if (dir == 1) {
-                        self.centerPoint.x -= 1;
+                        //self.centerPoint.x -= 1;
+                        //pos = self.centerPoint;
                     }
                 }
                 self.squareBody();

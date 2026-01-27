@@ -267,7 +267,7 @@ public class MainMenu : MonoBehaviour {
 	//	createCursors ();
 		//createTokens();
 		if (maxPlayers == 2) {
-			GameInfo.S.level = 5;
+			GameInfo.S.level = -1;
 			//change for cooop
 			GameInfo.S.numPlayers = 0;
 		}
@@ -374,16 +374,18 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	void newPlayer(int scheme, int controlType, int controlNum) {
-		Debug.Log("new player " + controlType + " " + controlNum);
 		int num = numActivePlayers;
 		if (num < totalPlayers) {
 			if (charMenu) {
-				charMenu.setBlocked(scheme, false);
+				//charMenu.setBlocked(scheme, false);
+				
 				charFunction screen = addCharacterScreen();
 				screen.type = controlType;
 				screen.num = controlNum;
 				screen.scheme = scheme;
 				charMenu.setPlayer(scheme, num);
+				charMenu.selectButton(scheme, new Vector2Int(0, 1));
+				charMenu.setBlocked(scheme, 0);
 			} else {
 				// specifically for skippign char screen for saga atm
 				GameInfo.S.controlNums[GameInfo.S.numPlayers] = controlNum;
@@ -814,9 +816,7 @@ public class MainMenu : MonoBehaviour {
 	bool starting = false;
 
 	public void goBack() {
-		Debug.Log("main menu go back");
 		if (mapScreen && mapScreen.activeInHierarchy) {
-			Debug.Log("map screen");
 			mapScreen.SetActive(false);
 			startMenu.SetActive(true);
 			title.SetActive(true);
@@ -824,7 +824,6 @@ public class MainMenu : MonoBehaviour {
 		}
 		if (charMenu) {
 			if (charMenu.gameObject.activeInHierarchy) {
-				Debug.Log("back from char menu");
 				if (multiPlayer) {
 					mapScreen.SetActive(true);
 				} else {

@@ -70,7 +70,7 @@ public class StartMenu : UIMenu {
 	void windowUp(GameObject win) {
 		win.SetActive (true);
 		for(int i = 0; i < blocked.Length; i++) {
-			blocked[i] = true;
+			blocked[i] = 1;
 		}
 		//MainMenu.S.gameObject.SetActive (false);
 		curWindow = win;
@@ -79,7 +79,7 @@ public class StartMenu : UIMenu {
 	public void closeWindow() {
 		//MainMenu.S.gameObject.SetActive (true);
 		for(int i = 0; i < blocked.Length; i++) {
-			blocked[i] = false;
+			blocked[i] = -1;
 		}
 		curWindow.SetActive (false);
 		curWindow = null;

@@ -72,5 +72,5 @@ MonoBehaviour:
   roomType: 0
   randomRoom: 0
   boss: 2
-  level: 2
+  level: 1
   speakerChange: 0

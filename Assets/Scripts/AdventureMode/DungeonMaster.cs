@@ -149,7 +149,7 @@ public class DungeonMaster : MonoBehaviour {
                 }
 			    curRoom = room;
 		    } else if (curRoom) {
-                Debug.Log("cur: " + curRoom.name + " checked: " + checkedRoom.name);
+                //Debug.Log("cur: " + curRoom.name + " checked: " + checkedRoom.name);
 			    curRoom = checkedRoom;
                 storybo.setCurShot(curRoom.myShot);
                 // revsiting, makes room at end of list, so less likely to be removed
@@ -234,7 +234,8 @@ public class DungeonMaster : MonoBehaviour {
             noRoomClear = false;
             dunSize = new Vector2Int(3, 3);
             bossRooms.Clear();
-            addBossRoom();
+            bossRooms.Add(new Vector2Int(0, 0));
+            //addBossRoom();
             if (boomBox.S) {
                 boomBox.S.startSwordSongs(false);
             }

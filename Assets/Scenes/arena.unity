@@ -541,6 +541,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114023470116580550, guid: e79e6fcbb02b06e48a9c8e04393ccac9,
+        type: 2}
+      propertyPath: doSplash
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114023470116580550, guid: e79e6fcbb02b06e48a9c8e04393ccac9,
+        type: 2}
+      propertyPath: pausedStart
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e79e6fcbb02b06e48a9c8e04393ccac9, type: 2}
   m_IsPrefabParent: 0
@@ -909,7 +919,7 @@ Prefab:
         type: 2}
       propertyPath: walls.Array.data[4]
       value: 
-      objectReference: {fileID: 1536186396053136, guid: 79ba8724b0c1b294d9f32ae702fa01a8,
+      objectReference: {fileID: 1118521594959686, guid: 224119fe244d8d74fa2ed627642ecb82,
         type: 2}
     - target: {fileID: 114178845622056210, guid: 5b097156ed8aeca48a5c92390d527bfa,
         type: 2}
@@ -960,12 +970,12 @@ Prefab:
     - target: {fileID: 114178845622056210, guid: 5b097156ed8aeca48a5c92390d527bfa,
         type: 2}
       propertyPath: worldSizes.Array.data[4].x
-      value: 221
+      value: 121
       objectReference: {fileID: 0}
     - target: {fileID: 114178845622056210, guid: 5b097156ed8aeca48a5c92390d527bfa,
         type: 2}
       propertyPath: worldSizes.Array.data[4].y
-      value: 191
+      value: 121
       objectReference: {fileID: 0}
     - target: {fileID: 114178845622056210, guid: 5b097156ed8aeca48a5c92390d527bfa,
         type: 2}
@@ -1086,6 +1096,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1822069620316510, guid: ac59d2b917df45845b64dd1eecc82110,
         type: 2}
+    - target: {fileID: 114178845622056210, guid: 5b097156ed8aeca48a5c92390d527bfa,
+        type: 2}
+      propertyPath: dungeonSize.x
+      value: 91
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178845622056210, guid: 5b097156ed8aeca48a5c92390d527bfa,
+        type: 2}
+      propertyPath: dungeonSize.y
+      value: 91
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b097156ed8aeca48a5c92390d527bfa, type: 2}
   m_IsPrefabParent: 0
@@ -1355,7 +1375,7 @@ Prefab:
     - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
         type: 2}
       propertyPath: level
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114286710023600398, guid: 4e946cc04c4af144ca7776ad59674747,
         type: 2}

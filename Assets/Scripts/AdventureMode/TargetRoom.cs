@@ -350,9 +350,9 @@ public class TargetRoom : DungeonRoom {
                                 t = (int)Mathf.Lerp(400, 700, (3 - difficulty) / 3);
                             }
                             dun = dm.spawnTarget((int)Mathf.Lerp(0, 2, difficulty / 3), t, pos, this);
-                        } else if (difficulty <= 4) {
+                        }/* else if (difficulty <= 4) {
                             dun = dm.spawnDummy(pos, this);
-                        } else {
+                        }*/ else {
                             //dun = dm.makeEnemy(pos.x, pos.y, this);
                             dun = spawnMonster(pos, 1);
                         }
@@ -426,7 +426,7 @@ public class TargetRoom : DungeonRoom {
             if (dun) {
                 Enemy mon = dun.GetComponent<Enemy>();
                 float power = Mathf.Min(1, Random.Range(0, ((dm.getLevels()+1) * monsterLevel)/maxMonster));
-                Debug.Log("power: " + power);
+                //Debug.Log("power: " + power);
                 mon.setStats(power);
                 points = Mathf.Max(1, (int)(power * 4));
             }
@@ -435,7 +435,7 @@ public class TargetRoom : DungeonRoom {
             if (dun) {
                 Enemy knk = dun.GetComponent<Enemy>();
                 float power = Mathf.Min(1, Random.Range(0, dm.getProgress(1)));
-                Debug.Log("power: " + power);
+                //Debug.Log("power: " + power);
                 knk.knockBackEnemy(power);
                 points = Mathf.Max(1, (int)(power * 6));
             }

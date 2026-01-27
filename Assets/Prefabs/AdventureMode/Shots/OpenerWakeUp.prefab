@@ -65,8 +65,9 @@ MonoBehaviour:
   analog: []
   key: []
   waveText:
-  - Alright alright, you can walk but can you fight?
-  - grab that broom over there
+  - Alright, you can walk but can you clean?
+  - grab that broom over there to the north
+  - and clean up this TRASH!!!
   afterText:
   - You are a really good custodian, truly magnificent!
   - Now if you could please go to the room to the West

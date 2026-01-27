@@ -5,8 +5,8 @@ using UnityEngine;
 public class SwingMechanics : Shot {
 
     public override void shapeRoom(DungeonRoom room, mapTerrain creator, int dir) {
-        room.doors[(dir+1)%4] = true;
-        room.doors[(dir+3)%4] = true;
+        room.doors[0] = true;
+        //room.doors[(dir+3)%4] = true;
         Vector2Int center = new Vector2Int(Map.S.worldSizeX/2, Map.S.worldSizeY/2);
         creator.clearCircle(center, 40);
         List<Vector2Int> corners = new List<Vector2Int>();

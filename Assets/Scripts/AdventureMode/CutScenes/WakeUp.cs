@@ -21,7 +21,7 @@ public class WakeUp : Shot {
         spawnStoryPoint(storyPoint[1], 15, center.y);
 
         TargetRoom tr = room.GetComponent<TargetRoom>();
-        tr.dm.spawnWalk(new Vector2Int(45, 45), 40, 40, tr);
+        tr.dm.spawnWalk(center, center.x, center.y, tr);
         //room.newWave();
         dun = room.dm.spawnLitterEnemy((int)(Map.S.worldSizeX * 0.75f), center.y,  room);
         room.addToWave(dun);

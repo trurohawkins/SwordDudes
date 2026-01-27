@@ -53,9 +53,9 @@ public class DungeonRoom : MonoBehaviour {
             for (int i = 0; i < 4; i++) {
                 Vector2Int d = GM.S.dirs[(i*2)];
                 if (i == 0 || i == 3) {
-                    d *= (spawnSpace+1);
+                    d *= (spawnSpace+2);
                 } else {
-                    d *= (spawnSpace);
+                    d *= (spawnSpace+1);
                 }
                 //Vector2Int d = GM.S.dirs[(i*2)];// * (doorSpace-2);
                 creator.spawns[i] = new Vector3Int (poles[i].x - d.x, poles[i].y - d.y, 0);
@@ -307,7 +307,7 @@ public class DungeonRoom : MonoBehaviour {
                 int n = (i + 2) % 4;
                 if (neighbors[i]) {
                     if (neighbors[i].curDoors[n]) {
-                        Debug.Log("to the " + i + " we are unlocking door " + n);
+                        //Debug.Log("to the " + i + " we are unlocking door " + n);
                         neighbors[i].curDoors[n].setLock(false);
                     }
                 }
@@ -716,6 +716,7 @@ public class DungeonRoom : MonoBehaviour {
 			wid = 2;
 			len = 5;
 		}
+        doo.centerPoint = new Vector2Int(xPos, yPos);
         doo.width = wid;
 		doo.length = len;
 		doo.squareBody();
@@ -767,7 +768,6 @@ public class DungeonRoom : MonoBehaviour {
             Destroy(obj.gameObject);
             return null;
         }
-        
         obj.pos = spawnPos;// new Vector2Int((int)(Map.S.worldSizeX/2), (int)(Map.S.worldSizeY * 0.75f));
         if (obj.isTarget) {
             targetCount++;

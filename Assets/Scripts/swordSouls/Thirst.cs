@@ -96,8 +96,29 @@ public class Thirst : SwordSoul {
 	}
 
 	public override void setColors(SwordAnimator an, int cn) {
+		if (an.extraGraphics != null) {
+			for (int i = 0; i < an.extraGraphics.Count; i++) {
+				Destroy(an.extraGraphics[i]);
+			}
+		}
+		an.extraGraphics = new List<GameObject>();
 		anim = an;
         setColors(cn);
+		Vector3 pos = an.transform.position;
+		for (int i = 0; i < range; i++) {
+			GameObject chunk = Instantiate(swordSprite, new Vector3(pos.x + 0.5f, pos.y + 3.5f + i, pos.z), transform.rotation);
+			SpriteRenderer sr = chunk.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
+			sr.color = heatColorB;
+			chunk.transform.parent = an.transform;
+			an.extraGraphics.Add(chunk);
+			if (i > 0) {
+				chunk = Instantiate(swordSprite, new Vector3(pos.x + 1.5f, pos.y + 3.5f + i, pos.z), transform.rotation);
+				chunk.transform.parent = an.transform;
+				sr = chunk.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
+				sr.color = heatColorB;
+				an.extraGraphics.Add(chunk);
+			}
+		}
     }
 
     public override void setSprites(bool on) {

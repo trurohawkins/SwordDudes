@@ -64,9 +64,9 @@ public class SwordOptionMenu : UIMenu {
         player = pNum;
         for (int i = 0; i < blocked.Length; i++) {
             if (i != scheme) {
-                blocked[i] = true;
+                blocked[i] = 1;
             } else {
-                blocked[i] = false;
+                blocked[i] = -1;
             }
         }
         humanType = type;

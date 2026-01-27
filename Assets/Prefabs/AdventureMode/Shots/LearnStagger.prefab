@@ -58,7 +58,8 @@ MonoBehaviour:
   leadUp: 0
   image: {fileID: 0}
   text:
-  - STAGGER ROOM
+  - You can stagger enemies with quick successive hits
+  - unlike damage and knockback, stagger damage is much less dependent on momentum
   analog: []
   key: []
   waveText: []

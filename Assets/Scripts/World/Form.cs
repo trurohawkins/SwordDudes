@@ -599,7 +599,11 @@ public class Form : MonoBehaviour {
 	public void leaveSpace() {
 		for (int i = 0; i < body.Length; i++) {
 			//Debug.Log("before:" + Map.S.world[originPoint.x + body [i].x, originPoint.y + body [i].y].within.Count);
-			Map.S.world [centerPoint.x + body [i].x, centerPoint.y + body [i].y].formLeave (this);
+			int xp = centerPoint.x + body[i].x;
+			int yp = centerPoint.y + body[i].y;
+			if (xp > -1 && yp > -1 && xp < Map.S.worldSizeX && yp < Map.S.worldSizeY) {
+				Map.S.world [centerPoint.x + body [i].x, centerPoint.y + body [i].y].formLeave (this);
+			}
 			//Debug.Log("after" + Map.S.world[originPoint.x + body [i].x, originPoint.y + body [i].y].within.Count);
 		}
 	}

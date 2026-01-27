@@ -52,7 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: 0
-  bossShot: 0
   pause: 1
   speaker: 0
   doorSpace: 15
@@ -68,7 +67,10 @@ MonoBehaviour:
   analog: []
   key: []
   waveText: []
-  afterText: []
+  afterText:
+  - swinging and hitting objects build up heat, you can also use -ignite- to build
+    heat faster
+  - you can also use -brace- to brace your sword and slow its heat build up
   afterImage: {fileID: 0}
   pre: {fileID: 0}
   next:

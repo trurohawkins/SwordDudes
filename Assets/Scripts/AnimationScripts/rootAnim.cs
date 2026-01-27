@@ -55,7 +55,6 @@ public class rootAnim : SwordAnimator {
     }
 
     public override void setAlpha(float val) {
-        Debug.Log("root set alpha " + val);
 		if (sr != null) {
 			//Debug.Log("setting alpha " + val);
             int amnt = growth > 5 ? sr.Length : 2;

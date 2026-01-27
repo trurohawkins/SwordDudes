@@ -57,11 +57,14 @@ MonoBehaviour:
   doorSpace: 5
   leadUp: 0
   image: {fileID: 0}
-  text: []
+  text:
+  - I need you to hit those targets over there, both of them
+  - and dont be lazy I need to you actually swing that broom with the -swing-
   analog: []
   key: []
   waveText: []
-  afterText: []
+  afterText:
+  - what are you waiting around for get going to the next room!
   afterImage: {fileID: 0}
   pre: {fileID: 0}
   next:

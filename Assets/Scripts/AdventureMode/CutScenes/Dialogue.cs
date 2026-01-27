@@ -299,6 +299,13 @@ public class Dialogue : UIMenu {
                     com = "Right Bumper";
                 }
                 break;
+            case "brace":
+                if (GameInfo.S.controls[0] == 2) {
+                    com = "Left Mouse Button";
+                } else {
+                    com = "Left Bumper";
+                }
+                break;
             case "newline":
                 com = "" + '\n';
                 break;

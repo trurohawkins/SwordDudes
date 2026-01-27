@@ -16,6 +16,9 @@ public class SwordAnimator : MonoBehaviour {
 
 	protected circleAttack will;
 	protected SwordSoul spirit;
+	
+	// used for glancing char screen
+	public List<GameObject> extraGraphics;
 
 	 void Awake() {
 		states = new string[2];

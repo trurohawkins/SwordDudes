@@ -20,7 +20,8 @@ public class UIMenu : MonoBehaviour {
 	public int cur = 0;
 	protected Vector2Int[] selects;
 	Vector2[] moves;
-	protected bool[] blocked;
+	//1 block, 0 ready to be unblocked, -1 unblocked
+	protected int[] blocked;
 	protected int[] backCount;
 
 	public Controller controller;
@@ -68,12 +69,12 @@ public class UIMenu : MonoBehaviour {
 		int num = 6;
 		moves = new Vector2[num];
 		selects = new Vector2Int[num];
-		blocked = new bool[num];
+		blocked = new int[num];
 		backCount = new int[num];
 		for (int i = 0; i < num; i++) {
 			selects[i] = new Vector2Int(0,0);//-1;
 			moves[i] = new Vector2(0,0);
-			blocked[i] = false;
+			blocked[i] = -1;
 			backCount[i] = -1;
 		}
 	}
@@ -124,16 +125,19 @@ public class UIMenu : MonoBehaviour {
 		//float moveX = Input.GetAxis ("LeftJoystickX"+controlNum);
 		bool getSome = false;
 		for (int i = 0; i < selects.Length; i++) {
-			if (!blocked[i]) {
+			if (blocked[i] != 1) {
 				moves[i] = getMove(i);//Input.GetAxis ("LeftJoystickY"+controlNum);
 				if (moves[i].x != 0 || moves[i].y != 0) {
-					getSome = true;
+					if (blocked[i] == -1) {
+						getSome = true;
+					}
+				} else if (blocked[i] == 0) {
+					blocked[i] = -1;
 				}
-				if (accept(i)) {
+				if (blocked[i] == -1 && accept(i)) {
 					if (boomBox.S) {
 						boomBox.S.yesPress (controlNum);
 					}
-					Debug.Log(name + " but tclick");
 					buttClick(i);
 				}
 			}
@@ -157,7 +161,7 @@ public class UIMenu : MonoBehaviour {
 			input = getSome;
 			count = moveInterval;
 		}
-		 if (mouseInp && !blocked[4]) {
+		 if (mouseInp && blocked[4] == -1) {
 			if (mousePos != Input.mousePosition) {
 				float closest = Mathf.Infinity;
 				Vector2Int chosen = new Vector2Int(-1,-1);
@@ -222,7 +226,8 @@ public class UIMenu : MonoBehaviour {
 								}
 							} while (!checkButt(mo.x, mo.y) && c < rows);
 							m = true;
-						} else if (Mathf.Abs(moves[i].x) > activeStick) {
+						}
+						if (Mathf.Abs(moves[i].x) > activeStick) {
 							int c = 0;
 							do {
 								if (moves[i].x > 0) {
