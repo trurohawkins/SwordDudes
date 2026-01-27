@@ -247,12 +247,12 @@ public class mapTerrain : MonoBehaviour {
 			fillCircle (lavaForm, new Vector2Int (Map.S.worldSizeX / 2, yEdge / 2), (int)(xEdge * 0.2f));
 
 		} else if (map == 4) {
-			Form rockForm = Instantiate (rock).GetComponent<Form> ();
+			Form waterForm = Instantiate (water).GetComponent<Form> ();
 			int xSpacing = xEdge/9;
 			int ySpacing = yEdge/9;
 			for (int x = xSpacing; x < xEdge - xSpacing; x += xSpacing) {
 				for (int y = ySpacing; y < yEdge - ySpacing; y += ySpacing) {
-					fillCircle (rockForm, new Vector2Int (x, y), 8);
+					fillCircle (waterForm, new Vector2Int (x, y), 8);
 				}
 			}
 			float bigEdge = 0.9f;
